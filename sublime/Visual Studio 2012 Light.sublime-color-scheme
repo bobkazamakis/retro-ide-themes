@@ -1,0 +1,705 @@
+{
+    // Visual Studio 2012 Light — blue directives, purple macros, teal types, and mostly plain identifiers
+    // Generated from the shared rule set. All schemes in this folder
+    // carry the same rule names and the same scopes.
+    "name": "Visual Studio 2012 Light",
+    "author": "Retro IDE Themes",
+    "variables":
+    {
+        "g_bg":             "#FFFFFF",
+        "g_fg":             "#000000",
+        "g_caret":          "#000000",
+        "g_block_caret":    "#5C5C5C",
+        "g_invisibles":     "#DCDCD2",
+        "g_line_hl":        "#F2F6FB",
+        "g_sel":            "#CCE4F7",
+        "g_sel_border":     "#A8CDEB",
+        "g_inactive_sel":   "#E4EFFA",
+        "g_highlight":      "#D8B933",
+        "g_find":           "#FBEFA0",
+        "g_find_fg":        "#000000",
+        "g_gutter_fg":      "#8C8C82",
+        "g_gutter_fg_hl":   "#2B91AF",
+        "g_guide":          "#E6E6DE",
+        "g_active_guide":   "#B8CFE5",
+        "g_stack_guide":    "#EFEFE7",
+        "g_fold":           "#FBEFA0",
+        "g_shadow":         "#00000012",
+        "g_accent":         "#2B91AF",
+        "g_brackets":       "#1F6E88",
+        "g_tags":           "#1F6E88",
+        "comment":          "#008000",
+        "doc":              "#2A8C2A",
+        "doc_key":          "#3F7F5F",
+        "codetag":          "#2E7D32",
+        "string":           "#A31515",
+        "string_raw":       "#A31515",
+        "char":             "#8B1A1A",
+        "escape":           "#B5561B",
+        "interp_punct":     "#B5561B",
+        "interp_fg":        "#000000",
+        "interp_bg":        "#FDF5F3",
+        "regexp":           "#9B2D6F",
+        "regexp_op":        "#7A3E9D",
+        "number":           "#000000",
+        "const_lang":       "#0000FF",
+        "const_other":      "#000000",
+        "enum_member":      "#2F4F4F",
+        "keyword":          "#0000FF",
+        "keyword_control":  "#0000FF",
+        "module":           "#000000",
+        "storage_type":     "#0000FF",
+        "storage_mod":      "#0000FF",
+        "self":             "#0000FF",
+        "operator_word":    "#0000FF",
+        "operator":         "#000000",
+        "operator_decl":    "#008080",
+        "preproc":          "#0000FF",
+        "macro":            "#BD63C5",
+        "preproc_inactive": "#7A7A7A",
+        "directive_value":  "#000000",
+        "attribute":        "#7A3E9D",
+        "attr_option":      "#9A6BB8",
+        "type":             "#2B91AF",
+        "type_lib":         "#2B91AF",
+        "type_alias":       "#2B91AF",
+        "generic":          "#1F6E88",
+        "type_punct":       "#2B91AF",
+        "func_decl":        "#000000",
+        "func_call":        "#000000",
+        "func_builtin":     "#000000",
+        "arg_label":        "#000000",
+        "param":            "#000000",
+        "init":             "#000000",
+        "accessor":         "#0000FF",
+        "shorthand":        "#000000",
+        "var":              "#000000",
+        "var_decl":         "#000000",
+        "member":           "#000000",
+        "var_project":      "#000000",
+        "punct":            "#000000",
+        "brace":            "#000000",
+        "continuation":     "#82827A",
+        "label":            "#000000",
+        "invalid_fg":       "#FFFFFF",
+        "invalid_bg":       "#C0392B",
+        "deprecated_bg":    "#7A3E9D",
+        "head":             "#00007F",
+        "bold":             "#000000",
+        "italic":           "#000000",
+        "link":             "#1F6E88",
+        "raw":              "#A31515",
+        "raw_bg":           "#F7F7F4",
+        "list_punct":       "#2B91AF",
+        "quote":            "#404040",
+        "diff_add_fg":      "#0B6B33",
+        "diff_add_bg":      "#EAF7EE",
+        "diff_del_fg":      "#9B1C1C",
+        "diff_del_bg":      "#FDECEC",
+        "diff_chg_fg":      "#8A5A00",
+        "diff_chg_bg":      "#FCF6E3",
+        "key":              "#1F6E88",
+        "tag":              "#00007F",
+        "tag_attr":         "#C0392B",
+        "reg_red":          "#C0392B",
+        "reg_orange":       "#B8860B",
+        "reg_yellow":       "#8A6D00",
+        "reg_green":        "#2E8B57",
+        "reg_blue":         "#2B91AF",
+        "reg_purple":       "#7A3E9D",
+        "reg_pink":         "#9B2D6F",
+        "func_global_decl": "#000000",
+        "func_global_call": "#000000",
+        "func_member_decl": "#000000",
+        "func_member_call": "#000000",
+        "var_local":        "#000000",
+        "var_global":       "#000000",
+        "member_static":    "#000000",
+        "type_fallback":    "#2B91AF",
+        "g_gutter":         "#FFFFFF"
+    },
+
+    "globals":
+    {
+        "background":                    "var(g_bg)",
+        "foreground":                    "var(g_fg)",
+        "caret":                         "var(g_caret)",
+        "block_caret":                   "var(g_block_caret)",
+        "invisibles":                    "var(g_invisibles)",
+        "line_highlight":                "var(g_line_hl)",
+        "selection":                     "var(g_sel)",
+        "selection_border":              "var(g_sel_border)",
+        "selection_border_width":        "1",
+        "inactive_selection":            "var(g_inactive_sel)",
+        "highlight":                     "var(g_highlight)",
+        "find_highlight":                "var(g_find)",
+        "find_highlight_foreground":     "var(g_find_fg)",
+        "gutter":                        "var(g_gutter)",
+        "gutter_foreground":             "var(g_gutter_fg)",
+        "gutter_foreground_highlight":   "var(g_gutter_fg_hl)",
+        "line_diff_width":               "3",
+        "line_diff_added":               "var(diff_add_fg)",
+        "line_diff_modified":            "var(diff_chg_fg)",
+        "line_diff_deleted":             "var(diff_del_fg)",
+        "guide":                         "var(g_guide)",
+        "active_guide":                  "var(g_active_guide)",
+        "stack_guide":                   "var(g_stack_guide)",
+        "misspelling":                   "var(reg_red)",
+        "fold_marker":                   "var(g_fold)",
+        "shadow":                        "var(g_shadow)",
+        "shadow_width":                  "4",
+        "accent":                        "var(g_accent)",
+        "brackets_options":              "underline",
+        "brackets_foreground":           "var(g_brackets)",
+        "bracket_contents_options":      "underline",
+        "bracket_contents_foreground":   "var(g_brackets)",
+        "tags_options":                  "stippled_underline",
+        "tags_foreground":               "var(g_tags)",
+        "popup_css": "html { background-color: #FFFFFF; color: #000000; border: 1px solid #B8CFE5; } a { color: #1F6E88; }"
+    },
+
+    "rules":
+    [
+        // ---------- Comments ------------------------------------------------------
+        {
+            "name": "Comment",
+            "scope": "comment, punctuation.definition.comment",
+            "foreground": "var(comment)",
+            "font_style": "italic"
+        },
+        {
+            "name": "Documentation comment",
+            "scope": "comment.block.documentation, comment.line.documentation, comment.block.documentation.swift, comment.line.documentation.swift",
+            "foreground": "var(doc)",
+            "font_style": "italic"
+        },
+        {
+            "name": "Documentation keyword (- Parameter, - Returns)",
+            "scope": "comment keyword, comment.block.documentation keyword, comment.block.documentation variable.parameter, comment entity.name, comment markup.bold",
+            "foreground": "var(doc_key)",
+            "font_style": "bold italic"
+        },
+        {
+            "name": "TODO / FIXME / MARK",
+            "scope": "comment keyword.codetag, comment keyword.other.mark, comment keyword.other.documentation, comment.line.double-slash keyword.codetag, keyword.codetag",
+            "foreground": "var(codetag)",
+            "font_style": "bold italic"
+        },
+        {
+            "name": "Shebang",
+            "scope": "comment.line.number-sign.shebang, punctuation.definition.comment.shebang",
+            "foreground": "var(preproc)"
+        },
+        // ---------- Strings -------------------------------------------------------
+        {
+            "name": "String",
+            "scope": "string, string.quoted, string.quoted.single, string.quoted.double, punctuation.definition.string, punctuation.definition.string.begin, punctuation.definition.string.end",
+            "foreground": "var(string)"
+        },
+        {
+            "name": "Raw and multiline string",
+            "scope": "string.quoted.other, string.quoted.raw, string.quoted.triple, string.unquoted, meta.string.raw, punctuation.definition.string.begin.raw, punctuation.definition.string.end.raw",
+            "foreground": "var(string_raw)"
+        },
+        {
+            "name": "Character literal",
+            "scope": "constant.character, constant.character.literal, string.quoted.single.char",
+            "foreground": "var(char)"
+        },
+        {
+            "name": "Character escape",
+            "scope": "constant.character.escape, constant.character.escape.swift, constant.character.escape.unicode.swift, constant.character.entity",
+            "foreground": "var(escape)"
+        },
+        {
+            "name": "String interpolation punctuation",
+            "scope": "punctuation.section.interpolation, punctuation.section.interpolation.begin, punctuation.section.interpolation.end, punctuation.definition.interpolation, punctuation.section.embedded, punctuation.section.embedded.begin, punctuation.section.embedded.end",
+            "foreground": "var(interp_punct)"
+        },
+        {
+            "name": "Code inside string interpolation",
+            "scope": "meta.interpolation, meta.interpolation.swift, meta.embedded.line",
+            "foreground": "var(interp_fg)",
+            "background": "var(interp_bg)"
+        },
+        {
+            "name": "Regular expression",
+            "scope": "string.regexp, string.regexp.classic",
+            "foreground": "var(regexp)"
+        },
+        {
+            "name": "Regular expression operators and classes",
+            "scope": "string.regexp keyword.operator, string.regexp punctuation.definition.group, string.regexp punctuation.definition.character-class, constant.other.character-class",
+            "foreground": "var(regexp_op)"
+        },
+        // ---------- Numbers and constants -----------------------------------------
+        {
+            "name": "Number",
+            "scope": "constant.numeric, constant.numeric.integer, constant.numeric.float, constant.numeric.hex, constant.numeric.binary, constant.numeric.octal, constant.numeric.value.swift, meta.number",
+            "foreground": "var(number)"
+        },
+        {
+            "name": "Number unit and suffix",
+            "scope": "constant.numeric.suffix, keyword.other.unit",
+            "foreground": "var(number)"
+        },
+        {
+            "name": "Language constant (true, false, nil)",
+            "scope": "constant.language, constant.language.boolean, constant.language.boolean.swift, constant.language.null, constant.language.null.swift, constant.language.nil",
+            "foreground": "var(const_lang)"
+        },
+        {
+            "name": "Other constant",
+            "scope": "constant.other, constant.other.caps, constant.other.placeholder.swift, variable.other.constant, entity.name.constant, support.constant",
+            "foreground": "var(const_other)"
+        },
+        {
+            "name": "Enum case member (.someCase)",
+            "scope": "variable.other.enummember, constant.other.enum, meta.function-call.swift variable.other.enummember, meta.path.swift variable.other.constant",
+            "foreground": "var(enum_member)"
+        },
+        {
+            "name": "Color literal",
+            "scope": "constant.other.color, constant.other.color.rgb-value",
+            "foreground": "var(const_other)"
+        },
+        // ---------- Keywords ------------------------------------------------------
+        {
+            "name": "Keyword",
+            "scope": "keyword, keyword.other, keyword.declaration",
+            "foreground": "var(keyword)"
+        },
+        {
+            "name": "Control keyword (if, guard, for, return, throw)",
+            "scope": "keyword.control, keyword.control.swift, keyword.control.flow, keyword.control.transfer, keyword.control.conditional, keyword.control.loop, keyword.control.exception",
+            "foreground": "var(keyword_control)"
+        },
+        {
+            "name": "Import keyword",
+            "scope": "keyword.control.import, keyword.control.import.swift, keyword.other.import, keyword.control.at-rule.import",
+            "foreground": "var(keyword)"
+        },
+        {
+            "name": "Module and namespace name",
+            "scope": "support.module, support.module.swift, support.module.system.swift, meta.import support.other, entity.name.namespace, meta.namespace entity.name",
+            "foreground": "var(module)"
+        },
+        {
+            "name": "Storage type (func, class, struct, enum, protocol, var, let)",
+            "scope": "storage, storage.type, storage.type.swift, storage.type.function, storage.type.class, storage.type.struct, storage.type.enum, storage.type.protocol, storage.type.extension",
+            "foreground": "var(storage_type)"
+        },
+        {
+            "name": "Storage modifier (public, static, final, mutating, async, throws, weak)",
+            "scope": "storage.modifier, storage.modifier.swift, storage.modifier.access, storage.modifier.lifetime, keyword.other.async, keyword.control.throws, keyword.other.declaration-specifier",
+            "foreground": "var(storage_mod)"
+        },
+        {
+            "name": "Language variable (self, Self, super, this)",
+            "scope": "variable.language, variable.language.swift, variable.language.this, storage.type.self.swift, keyword.other.self",
+            "foreground": "var(self)",
+            "font_style": "italic"
+        },
+        {
+            "name": "Operator keyword (as, is, in, try, await, some, any)",
+            "scope": "keyword.operator.word, keyword.operator.type, keyword.operator.cast, keyword.operator.expression, keyword.other.in, keyword.other.some, keyword.other.any",
+            "foreground": "var(operator_word)"
+        },
+        {
+            "name": "Operator",
+            "scope": "keyword.operator, keyword.operator.arithmetic, keyword.operator.comparison, keyword.operator.logical, keyword.operator.bitwise, keyword.operator.assignment, keyword.operator.optional, keyword.operator.range, keyword.operator.ternary-conditional.swift",
+            "foreground": "var(operator)"
+        },
+        {
+            "name": "Custom operator declaration",
+            "scope": "meta.declaration.operator.swift entity.name, meta.operator entity.name, keyword.declaration.operator, keyword.declaration.operator.swift",
+            "foreground": "var(operator_decl)"
+        },
+        // ---------- Compiler directives and attributes ----------------------------
+        {
+            "name": "Compiler directive ({$IFDEF}, #if, #available, #selector)",
+            "scope": "meta.preprocessor, meta.preprocessor.swift, keyword.control.directive, keyword.other.preprocessor, keyword.control.import.include, punctuation.definition.keyword.swift, support.function.preprocessor.platform-condition.swift, text.preprocessor.swift",
+            "foreground": "var(preproc)"
+        },
+        {
+            "name": "Inactive preprocessor block",
+            "scope": "comment.block.preprocessor, meta.preprocessor.inactive, meta.disabled",
+            "foreground": "var(preproc_inactive)"
+        },
+        {
+            "name": "Directive condition value (os, arch)",
+            "scope": "constant.language.preprocessor.architecture.swift, constant.language.preprocessor.environment.swift, constant.language.preprocessor.operating-system.swift, constant.language.preprocessor.wildcard.swift",
+            "foreground": "var(directive_value)"
+        },
+        {
+            "name": "Attribute (@available, @objc, @MainActor)",
+            "scope": "meta.annotation, meta.attribute, storage.type.annotation, variable.annotation, punctuation.definition.annotation, punctuation.definition.annotation.begin.swift, punctuation.definition.annotation.end.swift, support.function.annotation.swift, support.function.annotation.underscored.swift, variable.function.annotation.swift, meta.annotation.identifier.swift",
+            "foreground": "var(attribute)"
+        },
+        {
+            "name": "Property wrapper name (@State, @Binding)",
+            "scope": "meta.annotation entity.name, meta.attribute entity.name.type, meta.annotation.swift support.type",
+            "foreground": "var(attribute)"
+        },
+        {
+            "name": "Attribute option",
+            "scope": "constant.language.attribute-option.swift, meta.annotation.parameters.swift, meta.attribute variable.parameter",
+            "foreground": "var(attr_option)"
+        },
+        // ---------- Types ---------------------------------------------------------
+        {
+            "name": "Type declaration name",
+            "scope": "entity.name.type, entity.name.class, entity.name.struct, entity.name.enum, entity.name.protocol, entity.name.interface, entity.name.actor, entity.name.actor.swift, entity.name.class.swift, entity.name.struct.swift, entity.name.enum.swift, entity.name.protocol.swift, entity.name.x.extension.swift",
+            "foreground": "var(type)"
+        },
+        {
+            "name": "Type reference and library type",
+            "scope": "support.type, support.class, support.class.swift, support.class.type, support.class.cocoa.swift, support.type.class.foundation.swift, support.type.struct.standard-library.swift, support.type.struct.foundation.swift, support.type.enum.standard-library.swift, support.type.enum.foundation.swift, support.type.protocol.standard-library.swift, support.type.protocol.foundation.swift, support.type.typealias.standard-library.swift, support.type.typealias.foundation.swift, support.other.swift, entity.other.inherited-class, storage.type.primitive",
+            "foreground": "var(type_lib)"
+        },
+        {
+            "name": "Type alias and associated type",
+            "scope": "entity.name.type.alias, entity.name.type.associatedtype, entity.name.typealias.swift",
+            "foreground": "var(type_alias)"
+        },
+        {
+            "name": "Generic parameter",
+            "scope": "variable.parameter.generic, meta.generic entity.name.type, meta.generic.declaration entity.name.type, meta.generic.swift support.other.swift, punctuation.definition.generic, punctuation.definition.generic.begin, punctuation.definition.generic.end.swift",
+            "foreground": "var(generic)"
+        },
+        {
+            "name": "Type punctuation (optional ?, force !)",
+            "scope": "punctuation.definition.optional, keyword.operator.optional-type",
+            "foreground": "var(type_punct)"
+        },
+        // ---------- Functions -----------------------------------------------------
+        {
+            "name": "Global or free function declaration",
+            "scope": "entity.name.function, entity.name.function.swift, meta.function.declaration entity.name, meta.entity.name.function.swift, meta.entity.name.subscript.swift",
+            "foreground": "var(func_global_decl)"
+        },
+        {
+            "name": "Member function or method declaration",
+            "scope": "entity.name.method, entity.name.function.member, entity.name.function.member.static, meta.method.declaration entity.name",
+            "foreground": "var(func_member_decl)"
+        },
+        {
+            "name": "Global or free function call",
+            "scope": "variable.function, variable.function.custom-dot-operator.swift, meta.function-call entity.name.function, support.function, support.function.standard-library.swift, support.function.foundation.swift, support.function.cocoa.swift, support.function.objc.swift",
+            "foreground": "var(func_global_call)"
+        },
+        {
+            "name": "Member function or method call",
+            "scope": "variable.function.method, variable.function.member, support.function.method, meta.method-call variable.function, entity.name.function.operator.member",
+            "foreground": "var(func_member_call)"
+        },
+        {
+            "name": "Built-in function (print, min, max)",
+            "scope": "support.function.builtin, support.function.any-method",
+            "foreground": "var(func_builtin)"
+        },
+        {
+            "name": "Argument label",
+            "scope": "variable.parameter.function-call, meta.function-call variable.parameter",
+            "foreground": "var(arg_label)"
+        },
+        {
+            "name": "Parameter declaration",
+            "scope": "variable.parameter, variable.parameter.swift, variable.parameter.function, meta.function.parameters variable.parameter",
+            "foreground": "var(param)",
+            "font_style": "italic"
+        },
+        {
+            "name": "Initializer and deinitializer",
+            "scope": "keyword.declaration.function.constructor, storage.type.function.constructor, entity.name.function.constructor, entity.name.function.destructor, meta.entity.name.init.swift",
+            "foreground": "var(init)"
+        },
+        {
+            "name": "Subscript and accessor (get, set, willSet, didSet)",
+            "scope": "keyword.other.accessor, storage.type.accessor, keyword.other.subscript",
+            "foreground": "var(accessor)"
+        },
+        {
+            "name": "Wildcard and shorthand argument ($0, _)",
+            "scope": "variable.language.anonymous, variable.language.wildcard.swift, variable.parameter.shorthand, variable.other.positional, variable.other.shorthand-argument.swift",
+            "foreground": "var(shorthand)"
+        },
+        // ---------- Variables -----------------------------------------------------
+        {
+            "name": "Variable",
+            "scope": "variable, variable.other, variable.other.swift, variable.other.readwrite, variable.other.tuple.swift",
+            "foreground": "var(var_local)"
+        },
+        {
+            "name": "Declared variable and property name",
+            "scope": "meta.definition.variable entity.name, variable.other.declaration, meta.entity.name.var.swift, meta.entity.name.let.swift",
+            "foreground": "var(var_local)"
+        },
+        {
+            "name": "Member access (property)",
+            "scope": "variable.other.member, variable.other.property, variable.other.object.property, variable.other.instance, variable.other.field, meta.path variable.other",
+            "foreground": "var(member)"
+        },
+        {
+            "name": "Environment and global variable",
+            "scope": "variable.other.env, variable.other.global, variable.other.predefined, punctuation.definition.variable",
+            "foreground": "var(var_global)"
+        },
+        // ---------- Other language features ---------------------------------------
+        {
+            "name": "Macro name (C, C++, Rust)",
+            "scope": "entity.name.constant.preprocessor, entity.name.function.preprocessor, entity.name.function.macro, meta.preprocessor.macro entity.name, support.function.macro",
+            "foreground": "var(macro)"
+        },
+        {
+            "name": "Package and namespace declaration (Go, Java, C#)",
+            "scope": "entity.name.package, meta.namespace.declaration entity.name, support.other.namespace",
+            "foreground": "var(module)"
+        },
+        {
+            "name": "Decorator (Python, JavaScript, Angular)",
+            "scope": "meta.function.decorator, meta.function.decorator variable.function, punctuation.definition.decorator, entity.name.function.decorator",
+            "foreground": "var(attribute)"
+        },
+        {
+            "name": "Format specifier and placeholder (printf, f-string)",
+            "scope": "constant.other.placeholder, meta.format.brace, meta.format.percent, constant.other.format-spec",
+            "foreground": "var(escape)"
+        },
+        {
+            "name": "Command-line option (shell, make)",
+            "scope": "variable.parameter.option, constant.other.option, meta.function-call.arguments variable.parameter.option",
+            "foreground": "var(const_other)"
+        },
+        {
+            "name": "Built-in class and library object (JavaScript, Python)",
+            "scope": "support.class.builtin, support.type.exception, support.type.python, support.class.library, support.other.class",
+            "foreground": "var(type_lib)"
+        },
+        {
+            "name": "SQL and query keyword",
+            "scope": "keyword.other.DML, keyword.other.DDL, keyword.other.create, keyword.other.alias.sql, storage.type.sql",
+            "foreground": "var(keyword)"
+        },
+        {
+            "name": "Lifetime and reference (Rust, C++)",
+            "scope": "storage.modifier.lifetime.rust, entity.name.lifetime, keyword.operator.reference, keyword.operator.dereference",
+            "foreground": "var(storage_mod)"
+        },
+        {
+            "name": "Type hint and annotation separator (Python, TypeScript)",
+            "scope": "meta.annotation.type, punctuation.separator.annotation.python, punctuation.separator.type, keyword.operator.type.annotation",
+            "foreground": "var(type_punct)"
+        },
+        // ---------- Punctuation and structure -------------------------------------
+        {
+            "name": "Punctuation",
+            "scope": "punctuation.separator, punctuation.terminator, punctuation.accessor, punctuation.accessor.dot.swift, punctuation.separator.annotation.swift, punctuation.separator.annotation.type-annotation.swift, punctuation.separator.annotation.conformance.swift, punctuation.separator.annotation.conformance-or-inheritance.swift, punctuation.separator.annotation.return-arrow.swift, punctuation.separator.key-value.swift",
+            "foreground": "var(punct)"
+        },
+        {
+            "name": "Braces, brackets, parentheses",
+            "scope": "punctuation.section.block, punctuation.section.brackets, punctuation.section.parens, punctuation.section.group, punctuation.section.braces, punctuation.section.mapping, punctuation.section.sequence",
+            "foreground": "var(brace)"
+        },
+        {
+            "name": "Line continuation",
+            "scope": "punctuation.separator.continuation, punctuation.separator.continuation.line.swift",
+            "foreground": "var(continuation)"
+        },
+        {
+            "name": "Label and case pattern",
+            "scope": "entity.name.label, meta.label",
+            "foreground": "var(label)"
+        },
+        {
+            "name": "Invalid",
+            "scope": "invalid, invalid.illegal, invalid.swift, invalid.illegal.swift",
+            "foreground": "var(invalid_fg)",
+            "background": "var(invalid_bg)"
+        },
+        {
+            "name": "Deprecated",
+            "scope": "invalid.deprecated",
+            "foreground": "var(invalid_fg)",
+            "background": "var(deprecated_bg)"
+        },
+        {
+            "name": "Error message",
+            "scope": "message.error, markup.error",
+            "foreground": "var(reg_red)"
+        },
+        {
+            "name": "Warning message",
+            "scope": "message.warning, markup.warning",
+            "foreground": "var(reg_yellow)"
+        },
+        {
+            "name": "Info message",
+            "scope": "message.info, markup.info",
+            "foreground": "var(reg_blue)"
+        },
+        // ---------- Markup (Markdown and docs) ------------------------------------
+        {
+            "name": "Markup heading",
+            "scope": "markup.heading, entity.name.section, punctuation.definition.heading",
+            "foreground": "var(head)",
+            "font_style": "bold"
+        },
+        {
+            "name": "Markup bold",
+            "scope": "markup.bold, punctuation.definition.bold",
+            "foreground": "var(bold)",
+            "font_style": "bold"
+        },
+        {
+            "name": "Markup italic",
+            "scope": "markup.italic, punctuation.definition.italic",
+            "foreground": "var(italic)",
+            "font_style": "italic"
+        },
+        {
+            "name": "Markup bold italic",
+            "scope": "markup.bold markup.italic, markup.italic markup.bold",
+            "foreground": "var(bold)",
+            "font_style": "bold italic"
+        },
+        {
+            "name": "Markup underline",
+            "scope": "markup.underline",
+            "foreground": "var(link)",
+            "font_style": "underline"
+        },
+        {
+            "name": "Markup strikethrough",
+            "scope": "markup.strikethrough",
+            "foreground": "var(quote)"
+        },
+        {
+            "name": "Markup link",
+            "scope": "markup.underline.link, string.other.link, meta.link",
+            "foreground": "var(link)",
+            "font_style": "underline"
+        },
+        {
+            "name": "Markup raw / code",
+            "scope": "markup.raw, markup.raw.inline, markup.raw.inline.swift, markup.raw.block, markup.raw.code-fence",
+            "foreground": "var(raw)",
+            "background": "var(raw_bg)"
+        },
+        {
+            "name": "Markup list punctuation",
+            "scope": "markup.list punctuation.definition.list_item, punctuation.definition.list_item.markdown",
+            "foreground": "var(list_punct)"
+        },
+        {
+            "name": "Markup quote",
+            "scope": "markup.quote, punctuation.definition.blockquote",
+            "foreground": "var(quote)",
+            "font_style": "italic"
+        },
+        {
+            "name": "Markup separator",
+            "scope": "meta.separator, markup.separator",
+            "foreground": "var(list_punct)",
+            "font_style": "bold"
+        },
+        // ---------- Diff ----------------------------------------------------------
+        {
+            "name": "Diff inserted",
+            "scope": "markup.inserted",
+            "foreground": "var(diff_add_fg)",
+            "background": "var(diff_add_bg)"
+        },
+        {
+            "name": "Diff deleted",
+            "scope": "markup.deleted",
+            "foreground": "var(diff_del_fg)",
+            "background": "var(diff_del_bg)"
+        },
+        {
+            "name": "Diff changed",
+            "scope": "markup.changed",
+            "foreground": "var(diff_chg_fg)",
+            "background": "var(diff_chg_bg)"
+        },
+        {
+            "name": "Diff header",
+            "scope": "meta.diff.header, meta.diff.header.from-file, meta.diff.header.to-file, meta.diff.index",
+            "foreground": "var(head)",
+            "font_style": "bold"
+        },
+        {
+            "name": "Diff range",
+            "scope": "meta.diff.range, punctuation.definition.range.diff",
+            "foreground": "var(list_punct)"
+        },
+        // ---------- Data formats (JSON, YAML, XML, plist, CSS) --------------------
+        {
+            "name": "Object key",
+            "scope": "meta.mapping.key string, meta.mapping.key, entity.name.tag.yaml, support.type.property-name, meta.property-name",
+            "foreground": "var(key)"
+        },
+        {
+            "name": "Tag",
+            "scope": "entity.name.tag, punctuation.definition.tag",
+            "foreground": "var(tag)"
+        },
+        {
+            "name": "Tag attribute",
+            "scope": "entity.other.attribute-name.localname, meta.tag entity.other.attribute-name, entity.other.attribute-name",
+            "foreground": "var(tag_attr)"
+        },
+        {
+            "name": "Doctype and processing instruction",
+            "scope": "meta.tag.sgml.doctype, keyword.declaration.doctype, meta.tag.preprocessor, meta.tag.sgml",
+            "foreground": "var(preproc)"
+        },
+        {
+            "name": "CSS selector",
+            "scope": "entity.other.pseudo-class, entity.other.pseudo-element, source.css entity.other.attribute-name.class, source.css entity.other.attribute-name.id",
+            "foreground": "var(type)"
+        },
+        {
+            "name": "YAML anchor and alias",
+            "scope": "entity.name.other.alias, variable.other.alias, punctuation.definition.alias, entity.name.other.anchor",
+            "foreground": "var(const_other)"
+        },
+        // ---------- Plugin and diagnostic regions ---------------------------------
+        {
+            "name": "Region redish",
+            "scope": "region.redish",
+            "foreground": "var(reg_red)"
+        },
+        {
+            "name": "Region orangish",
+            "scope": "region.orangish",
+            "foreground": "var(reg_orange)"
+        },
+        {
+            "name": "Region yellowish",
+            "scope": "region.yellowish",
+            "foreground": "var(reg_yellow)"
+        },
+        {
+            "name": "Region greenish",
+            "scope": "region.greenish",
+            "foreground": "var(reg_green)"
+        },
+        {
+            "name": "Region bluish",
+            "scope": "region.bluish",
+            "foreground": "var(reg_blue)"
+        },
+        {
+            "name": "Region purplish",
+            "scope": "region.purplish",
+            "foreground": "var(reg_purple)"
+        },
+        {
+            "name": "Region pinkish",
+            "scope": "region.pinkish",
+            "foreground": "var(reg_pink)"
+        }
+    ]
+}

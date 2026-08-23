@@ -1,0 +1,47 @@
+<idea-plugin>
+  <id>retro.ide.islands.themes</id>
+  <name>Retro IDE Islands Themes</name>
+  <version>1.2.0</version>
+  <vendor>Retro IDE Themes</vendor>
+  <idea-version since-build="253" />
+  <depends>com.intellij.modules.platform</depends>
+  <description>Eighteen retro IDE color schemes with matching Islands UI themes for IntelliJ Platform-based JetBrains IDEs.</description>
+  <extensions defaultExtensionNs="com.intellij">
+    <themeProvider id="aabbe5f5-840d-530d-8497-e0f30f4bee59" path="/themes/visual-studio-2012-light.theme.json" targetUi="islands" />
+    <bundledColorScheme id="Visual Studio 2012 Light" path="colorSchemes/visual-studio-2012-light" />
+    <themeProvider id="14f82b3d-d25d-5cd8-a555-dea5d1ae0468" path="/themes/visual-studio-enhanced-light.theme.json" targetUi="islands" />
+    <bundledColorScheme id="Visual Studio Enhanced Light" path="colorSchemes/visual-studio-enhanced-light" />
+    <themeProvider id="a4759106-7937-5170-80ac-23c136ff2b86" path="/themes/visual-studio-enhanced-globals-vs-members-light.theme.json" targetUi="islands" />
+    <bundledColorScheme id="Visual Studio Enhanced (Globals vs. Members) Light" path="colorSchemes/visual-studio-enhanced-globals-vs-members-light" />
+    <themeProvider id="cbb58f89-22cb-54d4-aa16-51a0b7c81561" path="/themes/delphi-classic.theme.json" targetUi="islands" />
+    <bundledColorScheme id="Delphi Classic" path="colorSchemes/delphi-classic" />
+    <themeProvider id="a03915a9-b6fe-5b89-8d8e-b4b7f8bcb907" path="/themes/turbo-pascal.theme.json" targetUi="islands" />
+    <bundledColorScheme id="Turbo Pascal" path="colorSchemes/turbo-pascal" />
+    <themeProvider id="9056e786-3839-5a12-8d3a-1761a543bbbc" path="/themes/turbo-c-3-0.theme.json" targetUi="islands" />
+    <bundledColorScheme id="Turbo C++ 3.0" path="colorSchemes/turbo-c-3-0" />
+    <themeProvider id="dedf7dec-9640-57a2-8c21-d099baacfc5b" path="/themes/xcode-classic.theme.json" targetUi="islands" />
+    <bundledColorScheme id="Xcode Classic" path="colorSchemes/xcode-classic" />
+    <themeProvider id="019c7f17-7f8d-5cce-b00c-d251c38ce475" path="/themes/visual-basic-6.theme.json" targetUi="islands" />
+    <bundledColorScheme id="Visual Basic 6" path="colorSchemes/visual-basic-6" />
+    <themeProvider id="9514e9ca-3a1c-5c9c-8fb9-6919c8fb1043" path="/themes/visual-c-6.theme.json" targetUi="islands" />
+    <bundledColorScheme id="Visual C++ 6" path="colorSchemes/visual-c-6" />
+    <themeProvider id="3125046f-b6ea-540a-a51d-e4c4cbb5fdf6" path="/themes/borland-delphi-vb6.theme.json" targetUi="islands" />
+    <bundledColorScheme id="Borland Delphi VB6++" path="colorSchemes/borland-delphi-vb6" />
+    <themeProvider id="d7dbb849-8cb9-52e9-bdce-30ddb04e4569" path="/themes/borland-c-builder.theme.json" targetUi="islands" />
+    <bundledColorScheme id="Borland C++ Builder" path="colorSchemes/borland-c-builder" />
+    <themeProvider id="92ba887d-b200-583b-b3ef-6656999e4a0a" path="/themes/eclipse-classic.theme.json" targetUi="islands" />
+    <bundledColorScheme id="Eclipse Classic" path="colorSchemes/eclipse-classic" />
+    <themeProvider id="47a873b7-f821-5aa7-a5e6-b7f77686eb71" path="/themes/visual-studio-2012-dark.theme.json" targetUi="islands" />
+    <bundledColorScheme id="Visual Studio 2012 Dark" path="colorSchemes/visual-studio-2012-dark" />
+    <themeProvider id="ca26267c-6f56-5e16-884b-0b0aca7bfb2e" path="/themes/intellij-idea-default.theme.json" targetUi="islands" />
+    <bundledColorScheme id="IntelliJ IDEA Default" path="colorSchemes/intellij-idea-default" />
+    <themeProvider id="ad641f2d-7bc6-5ac4-bb29-efb44e55edab" path="/themes/emacs-21.theme.json" targetUi="islands" />
+    <bundledColorScheme id="Emacs 21" path="colorSchemes/emacs-21" />
+    <themeProvider id="8863ee0a-8f1d-5549-bf22-3e876956fdcf" path="/themes/vim-light.theme.json" targetUi="islands" />
+    <bundledColorScheme id="Vim Light" path="colorSchemes/vim-light" />
+    <themeProvider id="190c409b-0a0b-5599-91cd-c039a0063c9a" path="/themes/codewarrior.theme.json" targetUi="islands" />
+    <bundledColorScheme id="CodeWarrior" path="colorSchemes/codewarrior" />
+    <themeProvider id="15abf55d-25b3-5f83-9a21-6300325591fe" path="/themes/notepad-default.theme.json" targetUi="islands" />
+    <bundledColorScheme id="Notepad++ Default" path="colorSchemes/notepad-default" />
+  </extensions>
+</idea-plugin>
