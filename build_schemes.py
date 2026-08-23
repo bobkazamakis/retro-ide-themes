@@ -1585,9 +1585,9 @@ VS_ENHANCED_GLOBALS_MEMBERS_LIGHT = palette_variant(
 
 
 # A deliberate Win32 polyglot rather than a historical reconstruction. VC6
-# supplies blue reserved words and green comments; VB6 supplies maroon strings
-# and purple literals; Delphi supplies teal declarations and italic text; and
-# C++Builder supplies olive compiler directives. The palette stays inside the
+# supplies blue reserved words and compiler directives plus green comments;
+# VB6 supplies maroon strings and purple literals; and the Borland side
+# supplies teal declarations and italic text. The palette stays inside the
 # saturated Windows system-color cube, with a Windows 98 selection bar.
 BORLAND_DELPHI_VB6_PLUS_PLUS = palette_variant(
     VC6,
@@ -1598,11 +1598,13 @@ BORLAND_DELPHI_VB6_PLUS_PLUS = palette_variant(
         "g_sel": "#0A246A", "g_sel_fg": "#FFFFFF",
         "g_sel_border": "#0A246A", "g_inactive_sel": "#D4D0C8",
         "g_inactive_sel_fg": "#000000", "g_accent": "#000080",
-        "g_brackets": "#808000", "g_tags": "#808000",
+        "g_highlight": "#000080", "g_find": "#D4DAEC",
+        "g_fold": "#D4DAEC", "g_brackets": "#000080",
+        "g_tags": "#000080",
 
         # VC6 comments, VB6 literals
         "comment": "#008000", "doc": "#008000", "doc_key": "#006060",
-        "codetag": "#808000",
+        "codetag": "#006060",
         "string": "#800000", "string_raw": "#800000", "char": "#800000",
         "escape": "#800080", "interp_punct": "#800080",
         "interp_fg": "#000000", "interp_bg": "#FAF6F6",
@@ -1610,13 +1612,13 @@ BORLAND_DELPHI_VB6_PLUS_PLUS = palette_variant(
         "number": "#800080", "const_lang": "#800080",
         "const_other": "#800080", "enum_member": "#800080",
 
-        # VC6 reserved words, Delphi types, Borland directives
+        # VC6 reserved words and directives, Delphi types
         "keyword": "#0000FF", "keyword_control": "#0000FF",
         "module": "#008080", "storage_type": "#0000FF",
         "storage_mod": "#0000FF", "self": "#0000FF",
         "operator_word": "#0000FF", "operator": "#000000",
         "operator_decl": "#000080",
-        "preproc": "#808000", "macro": "#808000",
+        "preproc": "#0000FF", "macro": "#800080",
         "preproc_inactive": "#808080", "directive_value": "#000080",
         "attribute": "#800080", "attr_option": "#800080",
         "type": "#008080", "type_lib": "#006060",
@@ -1636,8 +1638,12 @@ BORLAND_DELPHI_VB6_PLUS_PLUS = palette_variant(
 
         # Markup and structured data follow the same semantic families
         "head": "#000080", "link": "#0000FF", "raw": "#800000",
-        "raw_bg": "#FAF6F6", "list_punct": "#808000", "quote": "#008000",
+        "raw_bg": "#FAF6F6", "list_punct": "#000080", "quote": "#008000",
         "key": "#006060", "tag": "#008080", "tag_attr": "#800000",
+
+        # Changed lines and warning regions use the blue/purple family too.
+        "diff_chg_fg": "#000080", "diff_chg_bg": "#E8EEF8",
+        "reg_orange": "#800000", "reg_yellow": "#800080",
     },
     {
         "comment": "italic", "doc": "italic", "doc_key": "italic",

@@ -32,9 +32,9 @@
     <option name="SOFT_WRAP_SIGN_COLOR" value="6A6A6A" />
     <option name="VISUAL_INDENT_GUIDE" value="EFEDE9" />
     <option name="WHITESPACES" value="D4D0C8" />
-    <option name="FOLDED_TEXT_BORDER_COLOR" value="FFFF80" />
+    <option name="FOLDED_TEXT_BORDER_COLOR" value="D4DAEC" />
     <option name="ADDED_LINES_COLOR" value="008000" />
-    <option name="MODIFIED_LINES_COLOR" value="808000" />
+    <option name="MODIFIED_LINES_COLOR" value="000080" />
     <option name="DELETED_LINES_COLOR" value="800000" />
     <option name="FILESTATUS_ADDED" value="008000" />
     <option name="FILESTATUS_MODIFIED" value="0000FF" />
@@ -425,9 +425,9 @@
     </option>
     <option name="TODO_DEFAULT_ATTRIBUTES">
       <value>
-        <option name="FOREGROUND" value="808000" />
+        <option name="FOREGROUND" value="006060" />
         <option name="FONT_TYPE" value="2" />
-        <option name="ERROR_STRIPE_COLOR" value="808000" />
+        <option name="ERROR_STRIPE_COLOR" value="006060" />
       </value>
     </option>
     <option name="DOC_CODE_BLOCK">
@@ -934,12 +934,12 @@
     </option>
     <option name="OC.DIRECTIVE">
       <value>
-        <option name="FOREGROUND" value="808000" />
+        <option name="FOREGROUND" value="0000FF" />
       </value>
     </option>
     <option name="OC.MACRONAME">
       <value>
-        <option name="FOREGROUND" value="808000" />
+        <option name="FOREGROUND" value="800080" />
       </value>
     </option>
     <option name="OC.MACRO_PARAMETER">
@@ -1167,12 +1167,12 @@
     </option>
     <option name="MARKDOWN_TABLE_SEPARATOR">
       <value>
-        <option name="FOREGROUND" value="808000" />
+        <option name="FOREGROUND" value="000080" />
       </value>
     </option>
     <option name="MARKDOWN_LIST_MARKER">
       <value>
-        <option name="FOREGROUND" value="808000" />
+        <option name="FOREGROUND" value="000080" />
       </value>
     </option>
     <option name="JSON.PROPERTY_KEY">
@@ -1252,7 +1252,7 @@
     </option>
     <option name="XML_PROLOGUE">
       <value>
-        <option name="FOREGROUND" value="808000" />
+        <option name="FOREGROUND" value="0000FF" />
       </value>
     </option>
     <option name="CSS.PROPERTY_NAME">
@@ -1311,14 +1311,14 @@
     </option>
     <option name="DIFF_MODIFIED">
       <value>
-        <option name="FOREGROUND" value="808000" />
-        <option name="BACKGROUND" value="F8F6E0" />
+        <option name="FOREGROUND" value="000080" />
+        <option name="BACKGROUND" value="E8EEF8" />
       </value>
     </option>
     <option name="DIFF_CONFLICT">
       <value>
-        <option name="FOREGROUND" value="808000" />
-        <option name="BACKGROUND" value="F8F6E0" />
+        <option name="FOREGROUND" value="000080" />
+        <option name="BACKGROUND" value="E8EEF8" />
       </value>
     </option>
     <option name="CONSOLE_NORMAL_OUTPUT">
@@ -1348,7 +1348,7 @@
     </option>
     <option name="LOG_WARNING_OUTPUT">
       <value>
-        <option name="FOREGROUND" value="808000" />
+        <option name="FOREGROUND" value="800080" />
       </value>
     </option>
     <option name="LOG_INFO_OUTPUT">
@@ -1392,48 +1392,48 @@
     <option name="SEARCH_RESULT_ATTRIBUTES">
       <value>
         <option name="FOREGROUND" value="000000" />
-        <option name="BACKGROUND" value="FFFF80" />
+        <option name="BACKGROUND" value="D4DAEC" />
       </value>
     </option>
     <option name="TEXT_SEARCH_RESULT_ATTRIBUTES">
       <value>
         <option name="FOREGROUND" value="000000" />
-        <option name="BACKGROUND" value="FFFF80" />
+        <option name="BACKGROUND" value="D4DAEC" />
       </value>
     </option>
     <option name="WRITE_SEARCH_RESULT_ATTRIBUTES">
       <value>
         <option name="FOREGROUND" value="000000" />
-        <option name="BACKGROUND" value="808000" />
+        <option name="BACKGROUND" value="000080" />
       </value>
     </option>
     <option name="IDENTIFIER_UNDER_CARET_ATTRIBUTES">
       <value>
-        <option name="EFFECT_COLOR" value="808000" />
+        <option name="EFFECT_COLOR" value="000080" />
         <option name="EFFECT_TYPE" value="1" />
       </value>
     </option>
     <option name="WRITE_IDENTIFIER_UNDER_CARET_ATTRIBUTES">
       <value>
-        <option name="EFFECT_COLOR" value="808000" />
+        <option name="EFFECT_COLOR" value="000080" />
         <option name="EFFECT_TYPE" value="1" />
       </value>
     </option>
     <option name="DEFAULT_HIGHLIGHTED_REFERENCE">
       <value>
-        <option name="EFFECT_COLOR" value="808000" />
+        <option name="EFFECT_COLOR" value="000080" />
         <option name="EFFECT_TYPE" value="1" />
       </value>
     </option>
     <option name="MATCHED_BRACE_ATTRIBUTES">
       <value>
-        <option name="EFFECT_COLOR" value="808000" />
+        <option name="EFFECT_COLOR" value="000080" />
         <option name="EFFECT_TYPE" value="1" />
       </value>
     </option>
     <option name="MATCHED_TAG_NAME">
       <value>
-        <option name="EFFECT_COLOR" value="808000" />
+        <option name="EFFECT_COLOR" value="000080" />
         <option name="EFFECT_TYPE" value="1" />
       </value>
     </option>
@@ -1498,16 +1498,16 @@
     </option>
     <option name="WARNING_ATTRIBUTES">
       <value>
-        <option name="EFFECT_COLOR" value="808000" />
+        <option name="EFFECT_COLOR" value="800080" />
         <option name="EFFECT_TYPE" value="2" />
-        <option name="ERROR_STRIPE_COLOR" value="808000" />
+        <option name="ERROR_STRIPE_COLOR" value="800080" />
       </value>
     </option>
     <option name="TEXT_STYLE_WARNING">
       <value>
-        <option name="EFFECT_COLOR" value="808000" />
+        <option name="EFFECT_COLOR" value="800080" />
         <option name="EFFECT_TYPE" value="2" />
-        <option name="ERROR_STRIPE_COLOR" value="808000" />
+        <option name="ERROR_STRIPE_COLOR" value="800080" />
       </value>
     </option>
     <option name="WEAK_WARNING_ATTRIBUTES">
@@ -1557,7 +1557,7 @@
     <option name="EXECUTIONPOINT_ATTRIBUTES">
       <value>
         <option name="FOREGROUND" value="000000" />
-        <option name="BACKGROUND" value="808000" />
+        <option name="BACKGROUND" value="000080" />
       </value>
     </option>
     <option name="LIVE_TEMPLATE_ATTRIBUTES">
@@ -1598,13 +1598,13 @@
     <option name="INLINE_PARAMETER_HINT_CURRENT">
       <value>
         <option name="FOREGROUND" value="000000" />
-        <option name="BACKGROUND" value="FFFF80" />
+        <option name="BACKGROUND" value="D4DAEC" />
       </value>
     </option>
     <option name="INLINE_PARAMETER_HINT_HIGHLIGHTED">
       <value>
         <option name="FOREGROUND" value="000000" />
-        <option name="BACKGROUND" value="FFFF80" />
+        <option name="BACKGROUND" value="D4DAEC" />
       </value>
     </option>
     <option name="BREADCRUMBS_DEFAULT">
