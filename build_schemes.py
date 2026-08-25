@@ -1595,7 +1595,7 @@ BORLAND_DELPHI_VB6_PLUS_PLUS = palette_variant(
     "Borland Delphi VB6++ — Win32 Polyglot remix",
     {
         # Windows editor surface
-        "g_sel": "#0A246A", "g_sel_fg": "#FFFFFF",
+        "g_sel": "#D3DCEE", "g_sel_fg": None,
         "g_sel_border": "#0A246A", "g_inactive_sel": "#D4D0C8",
         "g_inactive_sel_fg": "#000000", "g_accent": "#000080",
         "g_highlight": "#000080", "g_find": "#D4DAEC",

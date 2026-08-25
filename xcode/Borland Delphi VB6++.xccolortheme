@@ -27,7 +27,7 @@
 	<key>DVTConsoleTextInsertionPointColor</key>
 	<string>0 0 0 1</string>
 	<key>DVTConsoleTextSelectionColor</key>
-	<string>0.039216 0.141176 0.415686 1</string>
+	<string>0.827451 0.862745 0.933333 1</string>
 	<key>DVTDebuggerInstructionPointerColor</key>
 	<string>0 0 0.501961 1</string>
 	<key>DVTFontAndColorVersion</key>
@@ -97,7 +97,7 @@
 	<key>DVTSourceTextInvisiblesColor</key>
 	<string>0.831373 0.815686 0.784314 1</string>
 	<key>DVTSourceTextSelectionColor</key>
-	<string>0.039216 0.141176 0.415686 1</string>
+	<string>0.827451 0.862745 0.933333 1</string>
 	<key>DVTSourceTextSyntaxColors</key>
 	<dict>
 		<key>xcode.syntax.attribute</key>
