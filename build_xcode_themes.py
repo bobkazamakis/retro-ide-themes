@@ -17,18 +17,15 @@ from build_schemes import SCHEMES, check_all
 
 OUT = os.path.join(os.path.dirname(os.path.abspath(__file__)), "xcode")
 
-SIZE = 15.0
+SIZE = 14.0
 
-# SF Mono only, and one weight only: Regular. No bold face and no medium face
-# goes into these themes. The color alone marks the keywords and the attributes.
-#
-# The schemes that slant comments in Sublime Text keep the slant here, because
-# a slant is not a weight. Therefore "bold italic" in a scheme becomes the
-# regular italic face.
+# SF Mono only. Keywords and attributes use Semibold; all other syntax keeps
+# the Regular weight. The schemes that slant comments in Sublime Text keep the
+# slant here, because a slant is not a weight. Therefore "bold italic" in a
+# scheme becomes the regular italic face.
 REGULAR = "SFMono-Regular - %.1f" % SIZE
 ITALIC = "SFMono-RegularItalic - %.1f" % SIZE
-MEDIUM = "SFMono-Medium - %.1f" % SIZE
-MEDIUM_ITALIC = "SFMono-MediumItalic - %.1f" % SIZE
+SEMIBOLD = "SFMono-Semibold - %.1f" % SIZE
 
 FONT = {
     None: REGULAR,
@@ -37,25 +34,23 @@ FONT = {
     "bold italic": ITALIC,
 }
 
-# Empty: every key stays on Regular. To give a key the medium weight, put its
-# Xcode name in this set.
-MEDIUM_KEYS = set()
+# These syntax categories need stronger emphasis in every Xcode theme.
+SEMIBOLD_KEYS = {
+    "xcode.syntax.attribute",
+    "xcode.syntax.keyword",
+}
 
-# The markup view draws its headings larger than the code. These sizes follow
-# SIZE, therefore one edit moves everything.
-HEAD_1 = "SFMono-Regular - %.1f" % (SIZE + 12)
-HEAD_2 = "SFMono-Regular - %.1f" % (SIZE + 6)
-HEAD_3 = "SFMono-Regular - %.1f" % (SIZE + 2)
+# Keep every font in the Xcode themes at one consistent size.
+HEAD_1 = REGULAR
+HEAD_2 = REGULAR
+HEAD_3 = REGULAR
 
 # Xcode syntax key -> (color role, style role or None).
 # A ".system" key is for a symbol of the SDK. A key without it is for a symbol
 # of your own project.
 #
-# Keywords stay in the regular face. Six schemes (Delphi, C++Builder, Eclipse,
-# IDEA, Vim, Notepad++) embolden keywords in Sublime Text, because their editors
-# did. In Xcode that weight is too heavy, therefore these themes do not use it.
-# The color alone marks the keyword. This applies to the language constants
-# (true, false, nil) as well, because those are keywords too.
+# Keywords and attributes use the same semibold face in every theme, regardless
+# of the style used by the source editor being reproduced.
 SYNTAX = [
     ("xcode.syntax.plain",                     "g_fg",        None),
     ("xcode.syntax.comment",                   "comment",     "comment"),
@@ -225,8 +220,8 @@ def build(scheme):
     for key, role, style in SYNTAX:
         syntax_colors[key] = rgba(colors[role])
         face = FONT[styles[style] if style else None]
-        if key in MEDIUM_KEYS:
-            face = MEDIUM_ITALIC if face == ITALIC else MEDIUM
+        if key in SEMIBOLD_KEYS:
+            face = SEMIBOLD
         syntax_fonts[key] = face
     theme["DVTSourceTextSyntaxColors"] = syntax_colors
     theme["DVTSourceTextSyntaxFonts"] = syntax_fonts
@@ -234,13 +229,8 @@ def build(scheme):
 
 
 def check_faces(theme, name):
-    """Only the regular SF Mono faces, at the sizes this script sets, may pass.
-
-    MEDIUM_KEYS is empty, therefore no medium face can be correct. If you fill
-    that set, add "Medium" to ALLOWED below.
-    """
-    allowed = {REGULAR, ITALIC, HEAD_1, HEAD_2, HEAD_3}
-    allowed |= {MEDIUM, MEDIUM_ITALIC} if MEDIUM_KEYS else set()
+    """Only the configured SF Mono faces at the common size may pass."""
+    allowed = {REGULAR, ITALIC, SEMIBOLD}
     faces = set(theme["DVTSourceTextSyntaxFonts"].values())
     faces |= {v for k, v in theme.items()
               if k.endswith("Font") and isinstance(v, str)}
@@ -248,6 +238,11 @@ def check_faces(theme, name):
         if face not in allowed:
             raise SystemExit("%s: the face %r is not allowed. Allowed: %s"
                              % (name, face, ", ".join(sorted(allowed))))
+    syntax_fonts = theme["DVTSourceTextSyntaxFonts"]
+    for key in SEMIBOLD_KEYS:
+        if syntax_fonts[key] != SEMIBOLD:
+            raise SystemExit("%s: %s must use %s"
+                             % (name, key, SEMIBOLD))
 
 
 def main():
