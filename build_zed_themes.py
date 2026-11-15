@@ -1,10 +1,12 @@
 #!/usr/bin/env python3
-"""Generate eighteen full Zed UI and syntax themes.
+"""Generate twenty-one full Zed UI and syntax themes.
 
 The palettes come from build_schemes.py. Each generated file is a standalone
 Zed theme family with one theme, suitable for ~/.config/zed/themes. The UI
 surface hierarchy adapts iccir's macOS-inspired Timeless Theme for Zed.
 """
+
+from __future__ import annotations
 
 from dataclasses import dataclass
 import json
@@ -23,6 +25,7 @@ DARK_SCHEMES = {
     "Turbo Pascal",
     "Turbo C++ 3.0",
     "Visual Studio 2012 Dark",
+    "Visual Studio Enhanced Dark",
 }
 
 TURBO_SCHEMES = {
@@ -72,7 +75,7 @@ SYNTAX_SPECS = [
     # their own capture. C/C++ grammars that use only @preproc still inherit it.
     SyntaxSpec("macro", "macro", "preproc"),
     SyntaxSpec("primary", "g_fg"),
-    SyntaxSpec("property", "member"),
+    SyntaxSpec("property", "member", "member"),
     SyntaxSpec("punctuation", "punct"),
     SyntaxSpec("punctuation.bracket", "brace"),
     SyntaxSpec("punctuation.delimiter", "punct"),
@@ -81,7 +84,7 @@ SYNTAX_SPECS = [
     SyntaxSpec("punctuation.special", "interp_punct"),
     SyntaxSpec("selector", "type", "type"),
     SyntaxSpec("selector.pseudo", "attribute", "attribute"),
-    SyntaxSpec("string", "string"),
+    SyntaxSpec("string", "string", "string"),
     SyntaxSpec("string.escape", "escape"),
     SyntaxSpec("string.regex", "regexp"),
     SyntaxSpec("string.special", "char"),

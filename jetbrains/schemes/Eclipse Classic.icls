@@ -60,32 +60,32 @@
     </option>
     <option name="DEFAULT_IDENTIFIER">
       <value>
-        <option name="FOREGROUND" value="000000" />
+        <option name="FOREGROUND" value="6A3E3E" />
       </value>
     </option>
     <option name="DEFAULT_LOCAL_VARIABLE">
       <value>
-        <option name="FOREGROUND" value="000000" />
+        <option name="FOREGROUND" value="6A3E3E" />
       </value>
     </option>
     <option name="LOCAL_VARIABLE_ATTRIBUTES">
       <value>
-        <option name="FOREGROUND" value="000000" />
+        <option name="FOREGROUND" value="6A3E3E" />
       </value>
     </option>
     <option name="IMPLICIT_ANONYMOUS_CLASS_PARAMETER_ATTRIBUTES">
       <value>
-        <option name="FOREGROUND" value="000000" />
+        <option name="FOREGROUND" value="6A3E3E" />
       </value>
     </option>
     <option name="JS.LOCAL_VARIABLE">
       <value>
-        <option name="FOREGROUND" value="000000" />
+        <option name="FOREGROUND" value="6A3E3E" />
       </value>
     </option>
     <option name="KOTLIN_MUTABLE_VARIABLE">
       <value>
-        <option name="FOREGROUND" value="000000" />
+        <option name="FOREGROUND" value="6A3E3E" />
       </value>
     </option>
     <option name="DEFAULT_INSTANCE_FIELD">
@@ -720,57 +720,57 @@
     </option>
     <option name="DEFAULT_CLASS_NAME">
       <value>
-        <option name="FOREGROUND" value="0000C0" />
+        <option name="FOREGROUND" value="000000" />
       </value>
     </option>
     <option name="CLASS_NAME_ATTRIBUTES">
       <value>
-        <option name="FOREGROUND" value="0000C0" />
+        <option name="FOREGROUND" value="000000" />
       </value>
     </option>
     <option name="INTERFACE_NAME_ATTRIBUTES">
       <value>
-        <option name="FOREGROUND" value="0000C0" />
+        <option name="FOREGROUND" value="000000" />
       </value>
     </option>
     <option name="KOTLIN_CLASS">
       <value>
-        <option name="FOREGROUND" value="0000C0" />
+        <option name="FOREGROUND" value="000000" />
       </value>
     </option>
     <option name="KOTLIN_ABSTRACT_CLASS">
       <value>
-        <option name="FOREGROUND" value="0000C0" />
+        <option name="FOREGROUND" value="000000" />
       </value>
     </option>
     <option name="DEFAULT_CLASS_REFERENCE">
       <value>
-        <option name="FOREGROUND" value="0000C0" />
+        <option name="FOREGROUND" value="000000" />
       </value>
     </option>
     <option name="CLASS_REFERENCE">
       <value>
-        <option name="FOREGROUND" value="0000C0" />
+        <option name="FOREGROUND" value="000000" />
       </value>
     </option>
     <option name="TYPE_PARAMETER_NAME_ATTRIBUTES">
       <value>
-        <option name="FOREGROUND" value="0000C0" />
+        <option name="FOREGROUND" value="000000" />
       </value>
     </option>
     <option name="KOTLIN_TYPE_PARAMETER">
       <value>
-        <option name="FOREGROUND" value="0000C0" />
+        <option name="FOREGROUND" value="000000" />
       </value>
     </option>
     <option name="KOTLIN_TYPE_ALIAS">
       <value>
-        <option name="FOREGROUND" value="0000C0" />
+        <option name="FOREGROUND" value="000000" />
       </value>
     </option>
     <option name="TS.TYPE_PARAMETER">
       <value>
-        <option name="FOREGROUND" value="0000C0" />
+        <option name="FOREGROUND" value="000000" />
       </value>
     </option>
     <option name="DEFAULT_FUNCTION_DECLARATION">
@@ -995,7 +995,7 @@
     </option>
     <option name="OC.LOCAL_VARIABLE">
       <value>
-        <option name="FOREGROUND" value="000000" />
+        <option name="FOREGROUND" value="6A3E3E" />
       </value>
     </option>
     <option name="OC.GLOBAL_VARIABLE">
@@ -1025,17 +1025,17 @@
     </option>
     <option name="OC.STRUCT_LIKE">
       <value>
-        <option name="FOREGROUND" value="0000C0" />
+        <option name="FOREGROUND" value="000000" />
       </value>
     </option>
     <option name="OC.CLASS_REFERENCE">
       <value>
-        <option name="FOREGROUND" value="0000C0" />
+        <option name="FOREGROUND" value="000000" />
       </value>
     </option>
     <option name="OC.TYPEDEF">
       <value>
-        <option name="FOREGROUND" value="0000C0" />
+        <option name="FOREGROUND" value="000000" />
       </value>
     </option>
     <option name="OC.ENUM_CONST">
@@ -1272,17 +1272,17 @@
     </option>
     <option name="CSS.TAG_NAME">
       <value>
-        <option name="FOREGROUND" value="0000C0" />
+        <option name="FOREGROUND" value="000000" />
       </value>
     </option>
     <option name="CSS.PSEUDO">
       <value>
-        <option name="FOREGROUND" value="0000C0" />
+        <option name="FOREGROUND" value="000000" />
       </value>
     </option>
     <option name="CSS.HASH">
       <value>
-        <option name="FOREGROUND" value="0000C0" />
+        <option name="FOREGROUND" value="000000" />
       </value>
     </option>
     <option name="CSS.IMPORTANT">

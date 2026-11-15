@@ -244,7 +244,7 @@
             "font_weight": 700
           },
           "enum": {
-            "color": "#0000C0FF"
+            "color": "#000000FF"
           },
           "function": {
             "color": "#000000FF"
@@ -310,7 +310,7 @@
             "color": "#7F0055FF"
           },
           "selector": {
-            "color": "#0000C0FF"
+            "color": "#000000FF"
           },
           "selector.pseudo": {
             "color": "#646464FF"
@@ -344,14 +344,14 @@
             "font_weight": 700
           },
           "type": {
-            "color": "#0000C0FF"
+            "color": "#000000FF"
           },
           "type.builtin": {
             "color": "#7F0055FF",
             "font_weight": 700
           },
           "variable": {
-            "color": "#000000FF"
+            "color": "#6A3E3EFF"
           },
           "variable.parameter": {
             "color": "#6A3E3EFF"

@@ -91,21 +91,25 @@
     <option name="DEFAULT_INSTANCE_FIELD">
       <value>
         <option name="FOREGROUND" value="660E7A" />
+        <option name="FONT_TYPE" value="1" />
       </value>
     </option>
     <option name="INSTANCE_FIELD_ATTRIBUTES">
       <value>
         <option name="FOREGROUND" value="660E7A" />
+        <option name="FONT_TYPE" value="1" />
       </value>
     </option>
     <option name="KOTLIN_BACKING_FIELD_VARIABLE">
       <value>
         <option name="FOREGROUND" value="660E7A" />
+        <option name="FONT_TYPE" value="1" />
       </value>
     </option>
     <option name="Static property reference ID">
       <value>
         <option name="FOREGROUND" value="660E7A" />
+        <option name="FONT_TYPE" value="1" />
       </value>
     </option>
     <option name="DEFAULT_STATIC_FIELD">
@@ -461,66 +465,79 @@
     <option name="DEFAULT_STRING">
       <value>
         <option name="FOREGROUND" value="008000" />
+        <option name="FONT_TYPE" value="1" />
       </value>
     </option>
     <option name="JAVA_STRING">
       <value>
         <option name="FOREGROUND" value="008000" />
+        <option name="FONT_TYPE" value="1" />
       </value>
     </option>
     <option name="JAVA_CHAR">
       <value>
         <option name="FOREGROUND" value="008000" />
+        <option name="FONT_TYPE" value="1" />
       </value>
     </option>
     <option name="PY.STRING">
       <value>
         <option name="FOREGROUND" value="008000" />
+        <option name="FONT_TYPE" value="1" />
       </value>
     </option>
     <option name="PY.STRING.B">
       <value>
         <option name="FOREGROUND" value="008000" />
+        <option name="FONT_TYPE" value="1" />
       </value>
     </option>
     <option name="JS.STRING">
       <value>
         <option name="FOREGROUND" value="008000" />
+        <option name="FONT_TYPE" value="1" />
       </value>
     </option>
     <option name="TS.STRING">
       <value>
         <option name="FOREGROUND" value="008000" />
+        <option name="FONT_TYPE" value="1" />
       </value>
     </option>
     <option name="JSON.STRING">
       <value>
         <option name="FOREGROUND" value="008000" />
+        <option name="FONT_TYPE" value="1" />
       </value>
     </option>
     <option name="YAML_SCALAR_VALUE">
       <value>
         <option name="FOREGROUND" value="008000" />
+        <option name="FONT_TYPE" value="1" />
       </value>
     </option>
     <option name="YAML_SCALAR_LIST">
       <value>
         <option name="FOREGROUND" value="008000" />
+        <option name="FONT_TYPE" value="1" />
       </value>
     </option>
     <option name="HTML_ATTRIBUTE_VALUE">
       <value>
         <option name="FOREGROUND" value="008000" />
+        <option name="FONT_TYPE" value="1" />
       </value>
     </option>
     <option name="XML_ATTRIBUTE_VALUE">
       <value>
         <option name="FOREGROUND" value="008000" />
+        <option name="FONT_TYPE" value="1" />
       </value>
     </option>
     <option name="CUSTOM_STRING_ATTRIBUTES">
       <value>
         <option name="FOREGROUND" value="008000" />
+        <option name="FONT_TYPE" value="1" />
       </value>
     </option>
     <option name="DEFAULT_VALID_STRING_ESCAPE">
@@ -985,11 +1002,13 @@
     <option name="OC.STRING">
       <value>
         <option name="FOREGROUND" value="008000" />
+        <option name="FONT_TYPE" value="1" />
       </value>
     </option>
     <option name="OC.HEADER_PATH">
       <value>
         <option name="FOREGROUND" value="008000" />
+        <option name="FONT_TYPE" value="1" />
       </value>
     </option>
     <option name="OC.FORMAT_TOKEN">
@@ -1030,16 +1049,19 @@
     <option name="OC.IVAR">
       <value>
         <option name="FOREGROUND" value="660E7A" />
+        <option name="FONT_TYPE" value="1" />
       </value>
     </option>
     <option name="OC.STRUCT_FIELD">
       <value>
         <option name="FOREGROUND" value="660E7A" />
+        <option name="FONT_TYPE" value="1" />
       </value>
     </option>
     <option name="OC.PROPERTY">
       <value>
         <option name="FOREGROUND" value="660E7A" />
+        <option name="FONT_TYPE" value="1" />
       </value>
     </option>
     <option name="OC.STRUCT_LIKE">

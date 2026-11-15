@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Generate eighteen retro IDE Sublime Text color schemes from one canonical rule set.
+"""Generate twenty-one retro IDE Sublime Text color schemes from one canonical rule set.
 
 Every scheme gets the SAME rule list (same names, same scopes, same order).
 Only the colors and the font styles change, through per-scheme role palettes.
@@ -45,15 +45,15 @@ RULES = [
      "string, string.quoted, string.quoted.single, string.quoted.double, "
      "punctuation.definition.string, punctuation.definition.string.begin, "
      "punctuation.definition.string.end",
-     "string", None, None),
+     "string", None, "string"),
     ("Strings", "Raw and multiline string",
      "string.quoted.other, string.quoted.raw, string.quoted.triple, "
      "string.unquoted, meta.string.raw, "
      "punctuation.definition.string.begin.raw, punctuation.definition.string.end.raw",
-     "string_raw", None, None),
+     "string_raw", None, "string"),
     ("Strings", "Character literal",
      "constant.character, constant.character.literal, string.quoted.single.char",
-     "char", None, None),
+     "char", None, "string"),
     ("Strings", "Character escape",
      "constant.character.escape, constant.character.escape.swift, "
      "constant.character.escape.unicode.swift, constant.character.entity",
@@ -271,7 +271,7 @@ RULES = [
     ("Variables", "Member access (property)",
      "variable.other.member, variable.other.property, variable.other.object.property, "
      "variable.other.instance, variable.other.field, meta.path variable.other",
-     "member", None, None),
+     "member", None, "member"),
     ("Variables", "Environment and global variable",
      "variable.other.env, variable.other.global, variable.other.predefined, "
      "punctuation.definition.variable",
@@ -460,8 +460,9 @@ RULES = [
 # A role with the value None makes the generator leave the global out. This is
 # necessary for "selection_foreground": if a scheme sets it, Sublime draws all
 # selected text in that one color, and the syntax colors go away while you
-# select. Only the schemes with a dark selection bar set it, because dark blue
-# under dark blue text is not readable. See g_sel_fg in each palette.
+# select. The schemes with a dark selection bar set it, because dark blue
+# under dark blue text is not readable. Vim Light sets it because Vim itself
+# draws selected text black. See g_sel_fg in each palette.
 GLOBALS = [
     ("background", "{g_bg}"),
     ("foreground", "{g_fg}"),
@@ -555,6 +556,7 @@ VS2012_LIGHT = {
         "reg_pink": "#9B2D6F",
     },
     "styles": {
+        "string": None, "member": None,
         "comment": "italic", "doc": "italic", "doc_key": "bold italic",
         "codetag": "bold italic", "keyword": None, "self": "italic",
         "const_lang": None, "operator_decl": None, "preproc": None,
@@ -569,7 +571,8 @@ VS2012_LIGHT = {
 
 DELPHI = {
     "name": "Delphi Classic",
-    "note": "Delphi 7 code editor — white paper, black bold reserved words, navy italic comments",
+    "note": "Delphi 7 code editor — white paper, black bold reserved words, navy italic "
+            "comments and navy literals; teal types and purple routines are additions",
     "colors": {
         "g_bg": "#FFFFFF", "g_fg": "#000000", "g_caret": "#000000",
         "g_block_caret": "#4A4A56", "g_invisibles": "#D8DCE4",
@@ -583,10 +586,11 @@ DELPHI = {
         "g_accent": "#000080", "g_brackets": "#000080", "g_tags": "#000080",
         "comment": "#000080", "doc": "#2A3F80", "doc_key": "#000080",
         "codetag": "#000080",
-        "string": "#0000FF", "string_raw": "#0000FF", "char": "#0000C0",
+        # Delphi 7 drew strings, characters and numbers in the comment navy.
+        "string": "#000080", "string_raw": "#000080", "char": "#000080",
         "escape": "#7A3E9D", "interp_punct": "#7A3E9D", "interp_fg": "#000000",
         "interp_bg": "#F3F5FD", "regexp": "#9B2D6F", "regexp_op": "#7A3E9D",
-        "number": "#C05000", "const_lang": "#000000", "const_other": "#0B7A75",
+        "number": "#000080", "const_lang": "#000000", "const_other": "#0B7A75",
         "enum_member": "#0B7A75",
         "keyword": "#000000", "keyword_control": "#000000", "module": "#0B7A75",
         "storage_type": "#000000", "storage_mod": "#000000", "self": "#000000",
@@ -604,7 +608,7 @@ DELPHI = {
         "label": "#000080", "invalid_fg": "#FFFFFF", "invalid_bg": "#C0392B",
         "deprecated_bg": "#7A3E9D",
         "head": "#000080", "bold": "#000000", "italic": "#000000",
-        "link": "#000080", "raw": "#0000FF", "raw_bg": "#F6F7FA",
+        "link": "#000080", "raw": "#000080", "raw_bg": "#F6F7FA",
         "list_punct": "#0B7A75", "quote": "#3C3C46",
         "diff_add_fg": "#0B6B33", "diff_add_bg": "#EAF7EE",
         "diff_del_fg": "#9B1C1C", "diff_del_bg": "#FDECEC",
@@ -615,6 +619,7 @@ DELPHI = {
         "reg_pink": "#9B2D6F",
     },
     "styles": {
+        "string": None, "member": None,
         # Delphi bolded reserved words only. Color carries everything else.
         "comment": "italic", "doc": "italic", "doc_key": "bold italic",
         "codetag": "bold italic", "keyword": "bold", "self": "bold italic",
@@ -637,7 +642,8 @@ TP = {
         "g_line_hl": "#0808B8", "g_sel": "#00A8A8", "g_sel_fg": "#000000",
         "g_sel_border": "#54FCFC", "g_inactive_sel": "#1C1CB8",
         "g_inactive_sel_fg": "#FCFC54", "g_highlight": "#FCFC54",
-        "g_find": "#A8A800", "g_find_fg": "#FCFCFC",
+        # EGA brown. The dark yellow #A8A800 is not one of the 16 EGA colors.
+        "g_find": "#A85400", "g_find_fg": "#FCFCFC",
         "g_gutter_fg": "#7C7CE0", "g_gutter_fg_hl": "#54FCFC",
         "g_guide": "#2020B4", "g_active_guide": "#54FCFC",
         "g_stack_guide": "#1818AC", "g_fold": "#54FCFC", "g_shadow": "#00003080",
@@ -676,6 +682,7 @@ TP = {
         "reg_pink": "#FC54FC",
     },
     "styles": {
+        "string": None, "member": None,
         # The DOS IDE had no bold. Bright EGA colors did the work.
         "comment": "italic", "doc": "italic", "doc_key": "bold italic",
         "codetag": "bold italic", "keyword": None, "self": "italic",
@@ -699,7 +706,8 @@ TCPP = {
         "g_line_hl": "#0808B8", "g_sel": "#00A8A8", "g_sel_fg": "#000000",
         "g_sel_border": "#54FCFC", "g_inactive_sel": "#1C1CB8",
         "g_inactive_sel_fg": "#FCFC54", "g_highlight": "#FCFC54",
-        "g_find": "#A8A800", "g_find_fg": "#FCFCFC",
+        # EGA brown. The dark yellow #A8A800 is not one of the 16 EGA colors.
+        "g_find": "#A85400", "g_find_fg": "#FCFCFC",
         "g_gutter_fg": "#7C7CE0", "g_gutter_fg_hl": "#54FCFC",
         "g_guide": "#2020B4", "g_active_guide": "#54FCFC",
         "g_stack_guide": "#1818AC", "g_fold": "#54FCFC", "g_shadow": "#00003080",
@@ -740,6 +748,7 @@ TCPP = {
         "reg_pink": "#FC54FC",
     },
     "styles": {
+        "string": None, "member": None,
         # The DOS IDE had no bold. Bright EGA colors did the work.
         "comment": "italic", "doc": "italic", "doc_key": "bold italic",
         "codetag": "bold italic", "keyword": None, "self": "italic",
@@ -780,9 +789,10 @@ XCODE = {
         "preproc": "#643820", "preproc_inactive": "#7A7A7A",
         "directive_value": "#643820", "attribute": "#AA0D91",
         "attr_option": "#815F03",
-        "type": "#3F6E75", "type_lib": "#3F6E75", "type_alias": "#3F6E75",
+        # Project names are teal; system classes and functions are purple.
+        "type": "#3F6E75", "type_lib": "#5C2699", "type_alias": "#3F6E75",
         "generic": "#5C787E", "type_punct": "#3F6E75",
-        "func_decl": "#26474B", "func_call": "#3F6E75", "func_builtin": "#3F6E75",
+        "func_decl": "#26474B", "func_call": "#26474B", "func_builtin": "#2E0D6E",
         "arg_label": "#6C7A7D", "param": "#3D3D3D", "init": "#AA0D91",
         "accessor": "#AA0D91", "shorthand": "#3900A0",
         "var": "#000000", "var_decl": "#000000", "member": "#318495", "var_project": "#318495",
@@ -801,6 +811,7 @@ XCODE = {
         "reg_pink": "#C41A16",
     },
     "styles": {
+        "string": None, "member": None,
         # Xcode drew all code in one weight, and it did not slant comments.
         "comment": None, "doc": None, "doc_key": "bold", "codetag": "bold",
         "keyword": None, "self": None, "const_lang": None,
@@ -816,7 +827,7 @@ XCODE = {
 
 VB6 = {
     "name": "Visual Basic 6",
-    "note": "VB6 code window — white paper, blue keywords, green comments, navy selection",
+    "note": "VB6 code window — white paper, blue keywords, green comments, navy-bordered selection",
     "colors": {
         "g_bg": "#FFFFFF", "g_fg": "#000000", "g_caret": "#000000",
         "g_block_caret": "#555555", "g_invisibles": "#D4D0C8",
@@ -862,6 +873,7 @@ VB6 = {
         "reg_pink": "#800000",
     },
     "styles": {
+        "string": None, "member": None,
         # VB6 draws every token in one weight. Only markup keeps emphasis.
         "comment": None, "doc": None, "doc_key": "bold", "codetag": "bold",
         "keyword": None, "self": None, "const_lang": None, "operator_decl": None,
@@ -926,6 +938,7 @@ VC6 = {
         "reg_pink": "#800000",
     },
     "styles": {
+        "string": None, "member": None,
         # MSDEV drew every token in one weight, and it did not slant comments.
         "comment": None, "doc": None, "doc_key": "bold", "codetag": "bold",
         "keyword": None, "self": None, "const_lang": None, "operator_decl": None,
@@ -986,6 +999,7 @@ BCB = {
         "reg_pink": "#9B2D6F",
     },
     "styles": {
+        "string": None, "member": None,
         # As in Delphi: reserved words get the weight, nothing else.
         "comment": "italic", "doc": "italic", "doc_key": "bold italic",
         "codetag": "bold italic", "keyword": "bold", "self": "bold italic",
@@ -1026,12 +1040,15 @@ ECLIPSE = {
         "preproc": "#646464", "preproc_inactive": "#7A7A7A",
         "directive_value": "#646464", "attribute": "#646464",
         "attr_option": "#7F7F7F",
-        "type": "#0000C0", "type_lib": "#0000C0", "type_alias": "#0000C0",
-        "generic": "#0000C0", "type_punct": "#0000C0",
+        # "Classes" highlighting is off by default in Eclipse: class names stay black.
+        "type": "#000000", "type_lib": "#000000", "type_alias": "#000000",
+        "generic": "#000000", "type_punct": "#000000",
         "func_decl": "#000000", "func_call": "#000000", "func_builtin": "#000000",
         "arg_label": "#6A3E3E", "param": "#6A3E3E", "init": "#7F0055",
         "accessor": "#7F0055", "shorthand": "#0000C0",
         "var": "#000000", "var_decl": "#000000", "member": "#0000C0", "var_project": "#0000C0",
+        # "Local variables" highlighting is on by default in Eclipse.
+        "var_local": "#6A3E3E",
         "punct": "#000000", "brace": "#000000", "continuation": "#808080",
         "label": "#0000C0", "invalid_fg": "#FFFFFF", "invalid_bg": "#C0392B",
         "deprecated_bg": "#646464",
@@ -1047,7 +1064,8 @@ ECLIPSE = {
         "reg_pink": "#7F007F",
     },
     "styles": {
-        # Eclipse bolded keywords by default. Types get color, not weight.
+        "string": None, "member": None,
+        # Eclipse bolds keywords by default. Class names stay plain black.
         "comment": None, "doc": None, "doc_key": "bold", "codetag": "bold",
         "keyword": "bold", "self": "bold", "const_lang": "bold",
         "operator_decl": None, "preproc": None, "attribute": None, "type": None,
@@ -1111,6 +1129,7 @@ VS2012_DARK = {
         "reg_pink": "#D16969",
     },
     "styles": {
+        "string": None, "member": None,
         # Visual Studio drew all code in one weight and did not slant comments.
         "comment": None, "doc": None, "doc_key": "bold", "codetag": "bold",
         "keyword": None, "self": None, "const_lang": None, "operator_decl": None,
@@ -1176,6 +1195,7 @@ IDEA = {
         "reg_pink": "#A0208A",
     },
     "styles": {
+        "string": "bold", "member": "bold",
         # IDEA bolds keywords and fields, and slants comments.
         "comment": "italic", "doc": "italic", "doc_key": "bold",
         "codetag": "bold", "keyword": "bold", "self": "bold",
@@ -1191,7 +1211,7 @@ IDEA = {
 
 EMACS = {
     "name": "Emacs 21",
-    "note": "Emacs font-lock on light paper — firebrick comments, rosy-brown strings, purple keywords",
+    "note": "Emacs font-lock on light paper — firebrick comments, violet-red strings, purple keywords",
     "colors": {
         "g_bg": "#FFFFFF", "g_fg": "#000000", "g_caret": "#000000",
         "g_block_caret": "#555555", "g_invisibles": "#D0D0D0",
@@ -1205,14 +1225,14 @@ EMACS = {
         "g_stack_guide": "#F0F0F0", "g_fold": "#EEDC82",
         "g_shadow": "#00000012",
         "g_accent": "#A020F0", "g_brackets": "#A020F0", "g_tags": "#A020F0",
-        # font-lock draws strings in RosyBrown (#BC8F8F). That reads at 2.8:1
-        # on white, and it covers every string in the file. This scheme uses a
-        # darker rosy brown. Set these back to #BC8F8F for the exact face.
-        "comment": "#B22222", "doc": "#966464", "doc_key": "#9400D3",
+        # The font-lock faces of Emacs 22 to 31: VioletRed4 strings, and the
+        # doc face inherits them. Emacs 21 drew strings in RosyBrown (#BC8F8F,
+        # 2.8:1 on white); every other face here is the Emacs 22+ one too.
+        "comment": "#B22222", "doc": "#8B2252", "doc_key": "#9400D3",
         "codetag": "#FF0000",
-        "string": "#966464", "string_raw": "#966464", "char": "#966464",
+        "string": "#8B2252", "string_raw": "#8B2252", "char": "#8B2252",
         "escape": "#483D8B", "interp_punct": "#483D8B", "interp_fg": "#000000",
-        "interp_bg": "#F7F7F7", "regexp": "#966464", "regexp_op": "#483D8B",
+        "interp_bg": "#F7F7F7", "regexp": "#8B2252", "regexp_op": "#483D8B",
         "number": "#008B8B", "const_lang": "#008B8B", "const_other": "#008B8B",
         "enum_member": "#008B8B",
         "keyword": "#A020F0", "keyword_control": "#A020F0", "module": "#008B8B",
@@ -1232,7 +1252,7 @@ EMACS = {
         "label": "#0000FF", "invalid_fg": "#FFFFFF", "invalid_bg": "#FF0000",
         "deprecated_bg": "#B22222",
         "head": "#0000FF", "bold": "#000000", "italic": "#000000",
-        "link": "#0000EE", "raw": "#966464", "raw_bg": "#F5F5F5",
+        "link": "#0000EE", "raw": "#8B2252", "raw_bg": "#F5F5F5",
         "list_punct": "#A020F0", "quote": "#B22222",
         "diff_add_fg": "#227722", "diff_add_bg": "#DDFFDD",
         "diff_del_fg": "#AA2222", "diff_del_bg": "#FFDDDD",
@@ -1243,6 +1263,7 @@ EMACS = {
         "reg_pink": "#DA70D6",
     },
     "styles": {
+        "string": None, "member": None,
         # font-lock keeps one weight. Only the warning face gets bold.
         "comment": None, "doc": None, "doc_key": "bold", "codetag": "bold",
         "keyword": None, "self": None, "const_lang": None,
@@ -1264,7 +1285,8 @@ VIM = {
         "g_block_caret": "#555555",
         # SpecialKey and NonText are Blue in Vim.
         "g_invisibles": "#8080FF",
-        "g_line_hl": "#E5E5E5", "g_sel": "#D3D3D3", "g_sel_fg": None,
+        # Since patch 9.1.0106 the Visual group also sets black text.
+        "g_line_hl": "#E5E5E5", "g_sel": "#D3D3D3", "g_sel_fg": "#000000",
         "g_sel_border": "#B8B8B8", "g_inactive_sel": "#E8E8E8",
         "g_inactive_sel_fg": None, "g_highlight": "#FFFF00",
         "g_find": "#FFFF00", "g_find_fg": "#000000",
@@ -1312,6 +1334,7 @@ VIM = {
         "reg_pink": "#C000C0",
     },
     "styles": {
+        "string": None, "member": None,
         # Vim sets gui=bold on Statement and on Type. Nothing else.
         "comment": None, "doc": None, "doc_key": "bold", "codetag": "bold",
         "keyword": "bold", "self": "bold", "const_lang": None,
@@ -1392,6 +1415,7 @@ CW = {
         "reg_pink": "#A0006A",
     },
     "styles": {
+        "string": None, "member": None,
         # The CodeWarrior IDE gave each category a face of its own, but every
         # default was the plain face. No category came bold or italic.
         "comment": None, "doc": None, "doc_key": "bold", "codetag": "bold",
@@ -1422,10 +1446,10 @@ NPP = {
         "g_sel": "#C0C0C0", "g_sel_fg": None,
         "g_sel_border": "#A0A0A0", "g_inactive_sel": "#DEDEDE",
         "g_inactive_sel_fg": None,
-        # "Smart Highlighting" is green. "Find Mark Style" is red, therefore
-        # the found text goes white.
+        # "Smart Highlighting" is green. "Find Mark Style" is red, drawn as a
+        # 100/255-alpha box under the text: #FF9B9B on white paper.
         "g_highlight": "#00FF00",
-        "g_find": "#FF0000", "g_find_fg": "#FFFFFF",
+        "g_find": "#FF9B9B", "g_find_fg": "#000000",
         # "Line number margin": grey numbers. The margin grey (#E4E4E4) does
         # not come here, because the gutter uses the paper of the text area.
         "g_gutter_fg": "#808080", "g_gutter_fg_hl": "#8000FF",
@@ -1501,6 +1525,7 @@ NPP = {
         "reg_pink": "#FF0080",
     },
     "styles": {
+        "string": None, "member": None,
         # fontStyle="1" in the styler means bold. INSTRUCTION WORD, OPERATOR
         # and COMMENT DOC KEYWORD carry it. The comments do not.
         "comment": None, "doc": None, "doc_key": "bold", "codetag": "bold",
@@ -1654,9 +1679,67 @@ BORLAND_DELPHI_VB6_PLUS_PLUS = palette_variant(
 )
 
 
+# Modern companions: today's defaults of three IDEs whose classic look is in
+# this pack. Values come from the shipped themes where one exists (Xcode 27.2
+# Default (Light), the IntelliJ 2026.3 "Light" scheme) and from Microsoft's
+# screenshots and VS Code port for Visual Studio 2026's Enhanced dark preset.
+_VS_DARK_FUNCTIONS = ("func_decl", "func_call", "func_builtin", "func_global_decl",
+                      "func_global_call", "func_member_decl", "func_member_call", "init")
+VS_ENHANCED_DARK = palette_variant(
+    VS2012_DARK,
+    "Visual Studio Enhanced Dark",
+    "VS Enhanced Dark — yellow functions, light-blue locals, gray parameters, pink control flow",
+    dict({role: "#DCDCAA" for role in _VS_DARK_FUNCTIONS},
+         var="#9CDCFE", var_decl="#9CDCFE", var_local="#9CDCFE", var_project="#9CDCFE",
+         var_global="#DCDCDC", member="#DADADA", member_static="#DADADA",
+         keyword_control="#D8A0DF", param="#9A9A9A", arg_label="#9A9A9A",
+         macro="#BEB7FF", escape="#FFD68F", interp_punct="#FFD68F"),
+)
+
+_XCODE_KEYWORDS = ("keyword", "keyword_control", "storage_type", "storage_mod", "self",
+                   "operator_word", "const_lang", "accessor", "init", "g_accent", "head", "tag")
+XCODE_DEFAULT_LIGHT = palette_variant(
+    XCODE,
+    "Xcode Default (Light)",
+    "Xcode 27 Default (Light) — gray comments, bold magenta keywords, blue declarations",
+    dict({role: "#9B2393" for role in _XCODE_KEYWORDS},
+         # Plain text is black at 85% opacity, flattened onto white.
+         g_fg="#262626", g_sel="#A4CDFF", g_line_hl="#E8F2FF",
+         comment="#5D6C79", doc="#5D6C79", doc_key="#4A5560", codetag="#4A5560",
+         string="#C41A16", char="#1C00CF", number="#1C00CF",
+         preproc="#643820", macro="#643820", attribute="#815F03",
+         type="#0B4F79", type_lib="#3900A0",
+         func_decl="#0F68A0", func_global_decl="#0F68A0", func_member_decl="#0F68A0",
+         func_call="#326D74", func_member_call="#326D74",
+         func_builtin="#6C36A9", func_global_call="#6C36A9",
+         member="#326D74", var_project="#326D74"),
+    {"keyword": "bold", "self": "bold", "const_lang": "bold"},
+)
+
+_IDEA_KEYWORDS = ("keyword", "keyword_control", "storage_type", "storage_mod", "self",
+                  "operator_word", "const_lang", "accessor", "init", "head", "tag",
+                  "list_punct", "g_accent", "g_brackets", "g_tags", "g_gutter_fg_hl")
+INTELLIJ_LIGHT = palette_variant(
+    IDEA,
+    "IntelliJ Light (Islands)",
+    "IntelliJ 2026 Light — blue keywords, green strings, teal declarations, purple fields",
+    dict({**{role: "#0033B3" for role in _IDEA_KEYWORDS},
+          **{role: "#871094" for role in ("member", "const_other", "enum_member", "var_project",
+                                          "shorthand", "key", "tag_attr", "directive_value")}},
+         g_fg="#080808", g_sel="#A6D2FF", g_line_hl="#F5F8FE",
+         string="#067D17", string_raw="#067D17", char="#067D17", raw="#067D17",
+         regexp="#067D17", number="#1750EB",
+         comment="#8C8C8C", doc="#8C8C8C", doc_key="#8C8C8C", quote="#8C8C8C",
+         attribute="#9E880D", attr_option="#9E880D", preproc="#9E880D", macro="#9E880D",
+         func_decl="#00627A", func_global_decl="#00627A", func_member_decl="#00627A"),
+    {"keyword": None, "self": None, "const_lang": None, "string": None, "member": None},
+)
+
+
 SCHEMES = [VS2012_LIGHT, VS_ENHANCED_LIGHT, VS_ENHANCED_GLOBALS_MEMBERS_LIGHT,
-           DELPHI, TP, TCPP, XCODE, VB6, VC6, BORLAND_DELPHI_VB6_PLUS_PLUS, BCB,
-           ECLIPSE, VS2012_DARK, IDEA, EMACS, VIM, CW, NPP]
+           DELPHI, TP, TCPP, XCODE, XCODE_DEFAULT_LIGHT, VB6, VC6,
+           BORLAND_DELPHI_VB6_PLUS_PLUS, BCB, ECLIPSE, VS2012_DARK, VS_ENHANCED_DARK,
+           IDEA, INTELLIJ_LIGHT, EMACS, VIM, CW, NPP]
 
 # The side view with the line numbers uses the editor background. The line
 # numbers must sit on the same paper as the code. This loop keeps the two

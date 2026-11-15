@@ -47,7 +47,7 @@
 	<key>DVTMarkupTextEmphasisFont</key>
 	<string>SFMono-RegularItalic - 14.0</string>
 	<key>DVTMarkupTextInlineCodeColor</key>
-	<string>0 0 1 1</string>
+	<string>0 0 0.501961 1</string>
 	<key>DVTMarkupTextLinkColor</key>
 	<string>0 0 0.501961 1</string>
 	<key>DVTMarkupTextLinkFont</key>
@@ -103,7 +103,7 @@
 		<key>xcode.syntax.attribute</key>
 		<string>0.478431 0.243137 0.615686 1</string>
 		<key>xcode.syntax.character</key>
-		<string>0 0 0.752941 1</string>
+		<string>0 0 0.501961 1</string>
 		<key>xcode.syntax.comment</key>
 		<string>0 0 0.501961 1</string>
 		<key>xcode.syntax.comment.doc</key>
@@ -145,9 +145,9 @@
 		<key>xcode.syntax.markup.aside.kind</key>
 		<string>0 0 0.501961 1</string>
 		<key>xcode.syntax.markup.code</key>
-		<string>0 0 1 1</string>
+		<string>0 0 0.501961 1</string>
 		<key>xcode.syntax.number</key>
-		<string>0.752941 0.313725 0 1</string>
+		<string>0 0 0.501961 1</string>
 		<key>xcode.syntax.plain</key>
 		<string>0 0 0 1</string>
 		<key>xcode.syntax.preprocessor</key>
@@ -159,11 +159,11 @@
 		<key>xcode.syntax.regex.charname</key>
 		<string>0.478431 0.243137 0.615686 1</string>
 		<key>xcode.syntax.regex.number</key>
-		<string>0.752941 0.313725 0 1</string>
+		<string>0 0 0.501961 1</string>
 		<key>xcode.syntax.regex.other</key>
 		<string>0.478431 0.243137 0.615686 1</string>
 		<key>xcode.syntax.string</key>
-		<string>0 0 1 1</string>
+		<string>0 0 0.501961 1</string>
 		<key>xcode.syntax.url</key>
 		<string>0 0 0.501961 1</string>
 	</dict>

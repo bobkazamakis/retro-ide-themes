@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Write the same eighteen retro schemes as Xcode themes (.xccolortheme).
+"""Write the same twenty-one retro schemes as Xcode themes (.xccolortheme).
 
 The palettes come from build_schemes.py. That file stays the one source of the
 colors, therefore a Sublime Text scheme and its Xcode theme cannot disagree.
@@ -58,8 +58,8 @@ SYNTAX = [
     ("xcode.syntax.comment.doc.keyword",       "doc_key",     "doc_key"),
     ("xcode.syntax.mark",                      "codetag",     "codetag"),
     ("xcode.syntax.markup.aside.kind",         "doc_key",     "doc_key"),
-    ("xcode.syntax.string",                    "string",      None),
-    ("xcode.syntax.character",                 "char",        None),
+    ("xcode.syntax.string",                    "string",      "string"),
+    ("xcode.syntax.character",                 "char",        "string"),
     ("xcode.syntax.number",                    "number",      None),
     ("xcode.syntax.keyword",                   "keyword",     None),
     ("xcode.syntax.preprocessor",              "preproc",     "preproc"),

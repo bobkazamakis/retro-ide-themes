@@ -28,7 +28,7 @@
     <option name="SELECTED_INDENT_GUIDE" value="A52A2A" />
     <option name="SELECTION_BACKGROUND" value="D3D3D3" />
     <option name="SELECTION_BACKGROUND_INACTIVE" value="E8E8E8" />
-    <option name="SELECTION_FOREGROUND" value="" />
+    <option name="SELECTION_FOREGROUND" value="000000" />
     <option name="SOFT_WRAP_SIGN_COLOR" value="A52A2A" />
     <option name="VISUAL_INDENT_GUIDE" value="EDEDED" />
     <option name="WHITESPACES" value="8080FF" />

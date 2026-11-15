@@ -441,79 +441,79 @@
     </option>
     <option name="DOC_CODE_BLOCK">
       <value>
-        <option name="FOREGROUND" value="0000FF" />
+        <option name="FOREGROUND" value="000080" />
         <option name="BACKGROUND" value="F6F7FA" />
       </value>
     </option>
     <option name="DOC_CODE_INLINE">
       <value>
-        <option name="FOREGROUND" value="0000FF" />
+        <option name="FOREGROUND" value="000080" />
         <option name="BACKGROUND" value="F6F7FA" />
       </value>
     </option>
     <option name="DEFAULT_STRING">
       <value>
-        <option name="FOREGROUND" value="0000FF" />
+        <option name="FOREGROUND" value="000080" />
       </value>
     </option>
     <option name="JAVA_STRING">
       <value>
-        <option name="FOREGROUND" value="0000FF" />
+        <option name="FOREGROUND" value="000080" />
       </value>
     </option>
     <option name="JAVA_CHAR">
       <value>
-        <option name="FOREGROUND" value="0000FF" />
+        <option name="FOREGROUND" value="000080" />
       </value>
     </option>
     <option name="PY.STRING">
       <value>
-        <option name="FOREGROUND" value="0000FF" />
+        <option name="FOREGROUND" value="000080" />
       </value>
     </option>
     <option name="PY.STRING.B">
       <value>
-        <option name="FOREGROUND" value="0000FF" />
+        <option name="FOREGROUND" value="000080" />
       </value>
     </option>
     <option name="JS.STRING">
       <value>
-        <option name="FOREGROUND" value="0000FF" />
+        <option name="FOREGROUND" value="000080" />
       </value>
     </option>
     <option name="TS.STRING">
       <value>
-        <option name="FOREGROUND" value="0000FF" />
+        <option name="FOREGROUND" value="000080" />
       </value>
     </option>
     <option name="JSON.STRING">
       <value>
-        <option name="FOREGROUND" value="0000FF" />
+        <option name="FOREGROUND" value="000080" />
       </value>
     </option>
     <option name="YAML_SCALAR_VALUE">
       <value>
-        <option name="FOREGROUND" value="0000FF" />
+        <option name="FOREGROUND" value="000080" />
       </value>
     </option>
     <option name="YAML_SCALAR_LIST">
       <value>
-        <option name="FOREGROUND" value="0000FF" />
+        <option name="FOREGROUND" value="000080" />
       </value>
     </option>
     <option name="HTML_ATTRIBUTE_VALUE">
       <value>
-        <option name="FOREGROUND" value="0000FF" />
+        <option name="FOREGROUND" value="000080" />
       </value>
     </option>
     <option name="XML_ATTRIBUTE_VALUE">
       <value>
-        <option name="FOREGROUND" value="0000FF" />
+        <option name="FOREGROUND" value="000080" />
       </value>
     </option>
     <option name="CUSTOM_STRING_ATTRIBUTES">
       <value>
-        <option name="FOREGROUND" value="0000FF" />
+        <option name="FOREGROUND" value="000080" />
       </value>
     </option>
     <option name="DEFAULT_VALID_STRING_ESCAPE">
@@ -665,32 +665,32 @@
     </option>
     <option name="DEFAULT_NUMBER">
       <value>
-        <option name="FOREGROUND" value="C05000" />
+        <option name="FOREGROUND" value="000080" />
       </value>
     </option>
     <option name="JAVA_NUMBER">
       <value>
-        <option name="FOREGROUND" value="C05000" />
+        <option name="FOREGROUND" value="000080" />
       </value>
     </option>
     <option name="PY.NUMBER">
       <value>
-        <option name="FOREGROUND" value="C05000" />
+        <option name="FOREGROUND" value="000080" />
       </value>
     </option>
     <option name="JS.NUMBER">
       <value>
-        <option name="FOREGROUND" value="C05000" />
+        <option name="FOREGROUND" value="000080" />
       </value>
     </option>
     <option name="TS.NUMBER">
       <value>
-        <option name="FOREGROUND" value="C05000" />
+        <option name="FOREGROUND" value="000080" />
       </value>
     </option>
     <option name="CSS.NUMBER">
       <value>
-        <option name="FOREGROUND" value="C05000" />
+        <option name="FOREGROUND" value="000080" />
       </value>
     </option>
     <option name="DEFAULT_METADATA">
@@ -966,7 +966,7 @@
     </option>
     <option name="OC.NUMBER">
       <value>
-        <option name="FOREGROUND" value="C05000" />
+        <option name="FOREGROUND" value="000080" />
       </value>
     </option>
     <option name="OC.LINE_COMMENT">
@@ -983,12 +983,12 @@
     </option>
     <option name="OC.STRING">
       <value>
-        <option name="FOREGROUND" value="0000FF" />
+        <option name="FOREGROUND" value="000080" />
       </value>
     </option>
     <option name="OC.HEADER_PATH">
       <value>
-        <option name="FOREGROUND" value="0000FF" />
+        <option name="FOREGROUND" value="000080" />
       </value>
     </option>
     <option name="OC.FORMAT_TOKEN">
@@ -1133,13 +1133,13 @@
     </option>
     <option name="MARKDOWN_CODE_SPAN">
       <value>
-        <option name="FOREGROUND" value="0000FF" />
+        <option name="FOREGROUND" value="000080" />
         <option name="BACKGROUND" value="F6F7FA" />
       </value>
     </option>
     <option name="MARKDOWN_CODE_SPAN_MARKER">
       <value>
-        <option name="FOREGROUND" value="0000FF" />
+        <option name="FOREGROUND" value="000080" />
         <option name="BACKGROUND" value="F6F7FA" />
       </value>
     </option>
@@ -1286,7 +1286,7 @@
     </option>
     <option name="CSS.PROPERTY_VALUE">
       <value>
-        <option name="FOREGROUND" value="0000FF" />
+        <option name="FOREGROUND" value="000080" />
       </value>
     </option>
     <option name="CSS.TAG_NAME">
@@ -1564,7 +1564,7 @@
     </option>
     <option name="FOLDED_TEXT_ATTRIBUTES">
       <value>
-        <option name="FOREGROUND" value="0000FF" />
+        <option name="FOREGROUND" value="000080" />
         <option name="BACKGROUND" value="F6F7FA" />
       </value>
     </option>

@@ -270,7 +270,7 @@
             "color": "#0B7A75FF"
           },
           "number": {
-            "color": "#C05000FF"
+            "color": "#000080FF"
           },
           "operator": {
             "color": "#000000FF"
@@ -316,7 +316,7 @@
             "color": "#7A3E9DFF"
           },
           "string": {
-            "color": "#0000FFFF"
+            "color": "#000080FF"
           },
           "string.escape": {
             "color": "#7A3E9DFF"
@@ -325,7 +325,7 @@
             "color": "#9B2D6FFF"
           },
           "string.special": {
-            "color": "#0000C0FF"
+            "color": "#000080FF"
           },
           "string.special.symbol": {
             "color": "#0B7A75FF"
@@ -337,7 +337,7 @@
             "color": "#008000FF"
           },
           "text.literal": {
-            "color": "#0000FFFF"
+            "color": "#000080FF"
           },
           "title": {
             "color": "#000080FF",

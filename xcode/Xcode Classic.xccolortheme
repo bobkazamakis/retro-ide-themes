@@ -117,15 +117,15 @@
 		<key>xcode.syntax.identifier.class</key>
 		<string>0.247059 0.431373 0.458824 1</string>
 		<key>xcode.syntax.identifier.class.system</key>
-		<string>0.247059 0.431373 0.458824 1</string>
+		<string>0.360784 0.14902 0.6 1</string>
 		<key>xcode.syntax.identifier.constant</key>
 		<string>0.223529 0 0.627451 1</string>
 		<key>xcode.syntax.identifier.constant.system</key>
 		<string>0.666667 0.05098 0.568627 1</string>
 		<key>xcode.syntax.identifier.function</key>
-		<string>0.247059 0.431373 0.458824 1</string>
+		<string>0.14902 0.278431 0.294118 1</string>
 		<key>xcode.syntax.identifier.function.system</key>
-		<string>0.247059 0.431373 0.458824 1</string>
+		<string>0.180392 0.05098 0.431373 1</string>
 		<key>xcode.syntax.identifier.macro</key>
 		<string>0.392157 0.219608 0.12549 1</string>
 		<key>xcode.syntax.identifier.macro.system</key>
@@ -133,7 +133,7 @@
 		<key>xcode.syntax.identifier.type</key>
 		<string>0.247059 0.431373 0.458824 1</string>
 		<key>xcode.syntax.identifier.type.system</key>
-		<string>0.247059 0.431373 0.458824 1</string>
+		<string>0.360784 0.14902 0.6 1</string>
 		<key>xcode.syntax.identifier.variable</key>
 		<string>0.192157 0.517647 0.584314 1</string>
 		<key>xcode.syntax.identifier.variable.system</key>

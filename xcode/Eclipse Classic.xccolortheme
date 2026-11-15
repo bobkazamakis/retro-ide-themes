@@ -113,11 +113,11 @@
 		<key>xcode.syntax.declaration.other</key>
 		<string>0 0 0 1</string>
 		<key>xcode.syntax.declaration.type</key>
-		<string>0 0 0.752941 1</string>
+		<string>0 0 0 1</string>
 		<key>xcode.syntax.identifier.class</key>
-		<string>0 0 0.752941 1</string>
+		<string>0 0 0 1</string>
 		<key>xcode.syntax.identifier.class.system</key>
-		<string>0 0 0.752941 1</string>
+		<string>0 0 0 1</string>
 		<key>xcode.syntax.identifier.constant</key>
 		<string>0 0 0.752941 1</string>
 		<key>xcode.syntax.identifier.constant.system</key>
@@ -131,9 +131,9 @@
 		<key>xcode.syntax.identifier.macro.system</key>
 		<string>0.392157 0.392157 0.392157 1</string>
 		<key>xcode.syntax.identifier.type</key>
-		<string>0 0 0.752941 1</string>
+		<string>0 0 0 1</string>
 		<key>xcode.syntax.identifier.type.system</key>
-		<string>0 0 0.752941 1</string>
+		<string>0 0 0 1</string>
 		<key>xcode.syntax.identifier.variable</key>
 		<string>0 0 0.752941 1</string>
 		<key>xcode.syntax.identifier.variable.system</key>

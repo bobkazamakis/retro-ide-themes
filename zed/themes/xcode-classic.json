@@ -227,7 +227,7 @@
             "color": "#AA0D91FF"
           },
           "constructor": {
-            "color": "#3F6E75FF"
+            "color": "#26474BFF"
           },
           "embedded": {
             "color": "#000000FF",
@@ -245,7 +245,7 @@
             "color": "#3F6E75FF"
           },
           "function": {
-            "color": "#3F6E75FF"
+            "color": "#26474BFF"
           },
           "hint": {
             "color": "#7A7A7AFF",

@@ -729,32 +729,32 @@
     </option>
     <option name="DEFAULT_CLASS_REFERENCE">
       <value>
-        <option name="FOREGROUND" value="3F6E75" />
+        <option name="FOREGROUND" value="5C2699" />
       </value>
     </option>
     <option name="CLASS_REFERENCE">
       <value>
-        <option name="FOREGROUND" value="3F6E75" />
+        <option name="FOREGROUND" value="5C2699" />
       </value>
     </option>
     <option name="TYPE_PARAMETER_NAME_ATTRIBUTES">
       <value>
-        <option name="FOREGROUND" value="3F6E75" />
+        <option name="FOREGROUND" value="5C2699" />
       </value>
     </option>
     <option name="KOTLIN_TYPE_PARAMETER">
       <value>
-        <option name="FOREGROUND" value="3F6E75" />
+        <option name="FOREGROUND" value="5C2699" />
       </value>
     </option>
     <option name="KOTLIN_TYPE_ALIAS">
       <value>
-        <option name="FOREGROUND" value="3F6E75" />
+        <option name="FOREGROUND" value="5C2699" />
       </value>
     </option>
     <option name="TS.TYPE_PARAMETER">
       <value>
-        <option name="FOREGROUND" value="3F6E75" />
+        <option name="FOREGROUND" value="5C2699" />
       </value>
     </option>
     <option name="DEFAULT_FUNCTION_DECLARATION">
@@ -769,67 +769,67 @@
     </option>
     <option name="DEFAULT_FUNCTION_CALL">
       <value>
-        <option name="FOREGROUND" value="3F6E75" />
+        <option name="FOREGROUND" value="26474B" />
       </value>
     </option>
     <option name="JS.GLOBAL_FUNCTION">
       <value>
-        <option name="FOREGROUND" value="3F6E75" />
+        <option name="FOREGROUND" value="26474B" />
       </value>
     </option>
     <option name="TS.GLOBAL_FUNCTION">
       <value>
-        <option name="FOREGROUND" value="3F6E75" />
+        <option name="FOREGROUND" value="26474B" />
       </value>
     </option>
     <option name="CSS.FUNCTION">
       <value>
-        <option name="FOREGROUND" value="3F6E75" />
+        <option name="FOREGROUND" value="26474B" />
       </value>
     </option>
     <option name="KOTLIN_VARIABLE_AS_FUNCTION">
       <value>
-        <option name="FOREGROUND" value="3F6E75" />
+        <option name="FOREGROUND" value="26474B" />
       </value>
     </option>
     <option name="KOTLIN_VARIABLE_AS_FUNCTION_LIKE">
       <value>
-        <option name="FOREGROUND" value="3F6E75" />
+        <option name="FOREGROUND" value="26474B" />
       </value>
     </option>
     <option name="DEFAULT_INSTANCE_METHOD">
       <value>
-        <option name="FOREGROUND" value="3F6E75" />
+        <option name="FOREGROUND" value="26474B" />
       </value>
     </option>
     <option name="DEFAULT_STATIC_METHOD">
       <value>
-        <option name="FOREGROUND" value="3F6E75" />
+        <option name="FOREGROUND" value="26474B" />
       </value>
     </option>
     <option name="METHOD_CALL_ATTRIBUTES">
       <value>
-        <option name="FOREGROUND" value="3F6E75" />
+        <option name="FOREGROUND" value="26474B" />
       </value>
     </option>
     <option name="CONSTRUCTOR_CALL_ATTRIBUTES">
       <value>
-        <option name="FOREGROUND" value="3F6E75" />
+        <option name="FOREGROUND" value="26474B" />
       </value>
     </option>
     <option name="STATIC_METHOD_ATTRIBUTES">
       <value>
-        <option name="FOREGROUND" value="3F6E75" />
+        <option name="FOREGROUND" value="26474B" />
       </value>
     </option>
     <option name="JS.INSTANCE_MEMBER_FUNCTION">
       <value>
-        <option name="FOREGROUND" value="3F6E75" />
+        <option name="FOREGROUND" value="26474B" />
       </value>
     </option>
     <option name="PY.BUILTIN_NAME">
       <value>
-        <option name="FOREGROUND" value="3F6E75" />
+        <option name="FOREGROUND" value="2E0D6E" />
       </value>
     </option>
     <option name="DEFAULT_PARAMETER">
@@ -962,7 +962,7 @@
     </option>
     <option name="OC.FUNCTION">
       <value>
-        <option name="FOREGROUND" value="3F6E75" />
+        <option name="FOREGROUND" value="26474B" />
       </value>
     </option>
     <option name="OC.METHOD_DECLARATION">

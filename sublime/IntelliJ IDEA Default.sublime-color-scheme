@@ -194,17 +194,20 @@
         {
             "name": "String",
             "scope": "string, string.quoted, string.quoted.single, string.quoted.double, punctuation.definition.string, punctuation.definition.string.begin, punctuation.definition.string.end",
-            "foreground": "var(string)"
+            "foreground": "var(string)",
+            "font_style": "bold"
         },
         {
             "name": "Raw and multiline string",
             "scope": "string.quoted.other, string.quoted.raw, string.quoted.triple, string.unquoted, meta.string.raw, punctuation.definition.string.begin.raw, punctuation.definition.string.end.raw",
-            "foreground": "var(string_raw)"
+            "foreground": "var(string_raw)",
+            "font_style": "bold"
         },
         {
             "name": "Character literal",
             "scope": "constant.character, constant.character.literal, string.quoted.single.char",
-            "foreground": "var(char)"
+            "foreground": "var(char)",
+            "font_style": "bold"
         },
         {
             "name": "Character escape",
@@ -446,7 +449,8 @@
         {
             "name": "Member access (property)",
             "scope": "variable.other.member, variable.other.property, variable.other.object.property, variable.other.instance, variable.other.field, meta.path variable.other",
-            "foreground": "var(member)"
+            "foreground": "var(member)",
+            "font_style": "bold"
         },
         {
             "name": "Environment and global variable",

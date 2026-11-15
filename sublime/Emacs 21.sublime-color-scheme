@@ -1,5 +1,5 @@
 {
-    // Emacs font-lock on light paper — firebrick comments, rosy-brown strings, purple keywords
+    // Emacs font-lock on light paper — firebrick comments, violet-red strings, purple keywords
     // Generated from the shared rule set. All schemes in this folder
     // carry the same rule names and the same scopes.
     "name": "Emacs 21",
@@ -29,17 +29,17 @@
         "g_brackets":       "#A020F0",
         "g_tags":           "#A020F0",
         "comment":          "#B22222",
-        "doc":              "#966464",
+        "doc":              "#8B2252",
         "doc_key":          "#9400D3",
         "codetag":          "#FF0000",
-        "string":           "#966464",
-        "string_raw":       "#966464",
-        "char":             "#966464",
+        "string":           "#8B2252",
+        "string_raw":       "#8B2252",
+        "char":             "#8B2252",
         "escape":           "#483D8B",
         "interp_punct":     "#483D8B",
         "interp_fg":        "#000000",
         "interp_bg":        "#F7F7F7",
-        "regexp":           "#966464",
+        "regexp":           "#8B2252",
         "regexp_op":        "#483D8B",
         "number":           "#008B8B",
         "const_lang":       "#008B8B",
@@ -87,7 +87,7 @@
         "bold":             "#000000",
         "italic":           "#000000",
         "link":             "#0000EE",
-        "raw":              "#966464",
+        "raw":              "#8B2252",
         "raw_bg":           "#F5F5F5",
         "list_punct":       "#A020F0",
         "quote":            "#B22222",

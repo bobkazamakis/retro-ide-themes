@@ -1,10 +1,12 @@
 #!/usr/bin/env python3
-"""Generate eighteen JetBrains editor schemes and Islands UI themes.
+"""Generate twenty-one JetBrains editor schemes and Islands UI themes.
 
 The palettes come from build_schemes.py. The output is a cross-product
 IntelliJ Platform plugin for JetBrains IDEs 2025.3 and newer, plus standalone
 .icls files that can be imported without installing the UI theme plugin.
 """
+
+from __future__ import annotations
 
 from dataclasses import dataclass
 from io import BytesIO
@@ -38,6 +40,7 @@ DARK_SCHEMES = {
     "Turbo Pascal",
     "Turbo C++ 3.0",
     "Visual Studio 2012 Dark",
+    "Visual Studio Enhanced Dark",
 }
 
 TURBO_SCHEMES = {
@@ -82,7 +85,7 @@ attributes([
     "INSTANCE_FIELD_ATTRIBUTES",
     "KOTLIN_BACKING_FIELD_VARIABLE",
     "Static property reference ID",
-], "member")
+], "member", style="member")
 attributes(
     "DEFAULT_STATIC_FIELD STATIC_FIELD_ATTRIBUTES STATIC_FINAL_FIELD_ATTRIBUTES",
     "member_static")
@@ -134,7 +137,7 @@ attributes(
     "DEFAULT_STRING JAVA_STRING JAVA_CHAR PY.STRING PY.STRING.B "
     "JS.STRING TS.STRING JSON.STRING YAML_SCALAR_VALUE YAML_SCALAR_LIST "
     "HTML_ATTRIBUTE_VALUE XML_ATTRIBUTE_VALUE CUSTOM_STRING_ATTRIBUTES",
-    "string")
+    "string", style="string")
 attributes(
     "DEFAULT_VALID_STRING_ESCAPE CUSTOM_VALID_STRING_ESCAPE_ATTRIBUTES "
     "JAVA_VALID_STRING_ESCAPE JS.VALID_STRING_ESCAPE "
@@ -199,14 +202,14 @@ attributes("OC.MACRO_PARAMETER", "param", style="param")
 attributes("OC.CONDITIONALLY_NOT_COMPILED", "preproc_inactive")
 attributes("OC.NUMBER", "number")
 attributes("OC.LINE_COMMENT OC.BLOCK_COMMENT", "comment", style="comment")
-attributes("OC.STRING OC.HEADER_PATH", "string")
+attributes("OC.STRING OC.HEADER_PATH", "string", style="string")
 attributes("OC.FORMAT_TOKEN", "escape")
 attributes("OC.FUNCTION", "func_global_call", style="func_call")
 attributes("OC.METHOD_DECLARATION", "func_member_decl", style="func_decl")
 attributes("OC.PARAMETER", "param", style="param")
 attributes("OC.LOCAL_VARIABLE", "var_local")
 attributes("OC.GLOBAL_VARIABLE OC.EXTERN_VARIABLE", "var_global")
-attributes("OC.IVAR OC.STRUCT_FIELD OC.PROPERTY", "member")
+attributes("OC.IVAR OC.STRUCT_FIELD OC.PROPERTY", "member", style="member")
 attributes("OC.STRUCT_LIKE OC.CLASS_REFERENCE OC.TYPEDEF", "type", style="type")
 attributes("OC.ENUM_CONST", "enum_member")
 attributes("OC.NAMESPACE_LIKE", "module")
@@ -866,7 +869,7 @@ def build_plugin_xml():
     depends.text = "com.intellij.modules.platform"
     description = ET.SubElement(root, "description")
     description.text = (
-        "Eighteen retro IDE color schemes with matching Islands UI themes "
+        "Twenty-one retro IDE color schemes with matching Islands UI themes "
         "for IntelliJ Platform-based JetBrains IDEs.")
     extensions = ET.SubElement(root, "extensions", {"defaultExtensionNs": "com.intellij"})
     for scheme in SCHEMES:

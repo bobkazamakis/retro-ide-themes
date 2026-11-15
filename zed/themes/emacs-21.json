@@ -218,7 +218,7 @@
             "color": "#B22222FF"
           },
           "comment.doc": {
-            "color": "#966464FF"
+            "color": "#8B2252FF"
           },
           "constant": {
             "color": "#008B8BFF"
@@ -313,16 +313,16 @@
             "color": "#483D8BFF"
           },
           "string": {
-            "color": "#966464FF"
+            "color": "#8B2252FF"
           },
           "string.escape": {
             "color": "#483D8BFF"
           },
           "string.regex": {
-            "color": "#966464FF"
+            "color": "#8B2252FF"
           },
           "string.special": {
-            "color": "#966464FF"
+            "color": "#8B2252FF"
           },
           "string.special.symbol": {
             "color": "#008B8BFF"
@@ -334,7 +334,7 @@
             "color": "#483D8BFF"
           },
           "text.literal": {
-            "color": "#966464FF"
+            "color": "#8B2252FF"
           },
           "title": {
             "color": "#0000FFFF",

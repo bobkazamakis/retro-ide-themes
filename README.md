@@ -1,7 +1,7 @@
 # Retro IDE themes
 
-Eighteen classic and enhanced editor themes for Sublime Text, Xcode, JetBrains
-IDEs, and Zed.
+Twenty-one classic, enhanced, and modern editor themes for Sublime Text, Xcode,
+JetBrains IDEs, and Zed.
 
 ## Themes
 
@@ -9,11 +9,14 @@ IDEs, and Zed.
 - Visual Studio Enhanced Light
 - Visual Studio Enhanced (Globals vs. Members) Light
 - Visual Studio 2012 Dark
+- Visual Studio Enhanced Dark
 - Visual C++ 6
 - Visual Basic 6
 - Borland Delphi VB6++
 - Xcode Classic
+- Xcode Default (Light)
 - IntelliJ IDEA Default
+- IntelliJ Light (Islands)
 - Eclipse Classic
 - CodeWarrior
 - Delphi Classic

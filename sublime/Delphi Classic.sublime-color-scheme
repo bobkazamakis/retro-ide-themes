@@ -1,5 +1,5 @@
 {
-    // Delphi 7 code editor — white paper, black bold reserved words, navy italic comments
+    // Delphi 7 code editor — white paper, black bold reserved words, navy italic comments and navy literals; teal types and purple routines are additions
     // Generated from the shared rule set. All schemes in this folder
     // carry the same rule names and the same scopes.
     "name": "Delphi Classic",
@@ -32,16 +32,16 @@
         "doc":              "#2A3F80",
         "doc_key":          "#000080",
         "codetag":          "#000080",
-        "string":           "#0000FF",
-        "string_raw":       "#0000FF",
-        "char":             "#0000C0",
+        "string":           "#000080",
+        "string_raw":       "#000080",
+        "char":             "#000080",
         "escape":           "#7A3E9D",
         "interp_punct":     "#7A3E9D",
         "interp_fg":        "#000000",
         "interp_bg":        "#F3F5FD",
         "regexp":           "#9B2D6F",
         "regexp_op":        "#7A3E9D",
-        "number":           "#C05000",
+        "number":           "#000080",
         "const_lang":       "#000000",
         "const_other":      "#0B7A75",
         "enum_member":      "#0B7A75",
@@ -87,7 +87,7 @@
         "bold":             "#000000",
         "italic":           "#000000",
         "link":             "#000080",
-        "raw":              "#0000FF",
+        "raw":              "#000080",
         "raw_bg":           "#F6F7FA",
         "list_punct":       "#0B7A75",
         "quote":            "#3C3C46",

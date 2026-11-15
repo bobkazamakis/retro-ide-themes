@@ -291,7 +291,8 @@
             "color": "#000000FF"
           },
           "property": {
-            "color": "#660E7AFF"
+            "color": "#660E7AFF",
+            "font_weight": 700
           },
           "punctuation": {
             "color": "#000000FF"
@@ -318,7 +319,8 @@
             "color": "#808000FF"
           },
           "string": {
-            "color": "#008000FF"
+            "color": "#008000FF",
+            "font_weight": 700
           },
           "string.escape": {
             "color": "#0037A6FF"
