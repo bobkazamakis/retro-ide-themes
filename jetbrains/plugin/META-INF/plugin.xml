@@ -1,7 +1,7 @@
 <idea-plugin>
   <id>retro.ide.islands.themes</id>
   <name>Retro IDE Islands Themes</name>
-  <version>1.2.0</version>
+  <version>1.3.0</version>
   <vendor>Retro IDE Themes</vendor>
   <idea-version since-build="253" />
   <depends>com.intellij.modules.platform</depends>

@@ -29,7 +29,7 @@ IMPORTABLE_SCHEMES = OUT / "schemes"
 
 PLUGIN_ID = "retro.ide.islands.themes"
 PLUGIN_NAME = "Retro IDE Islands Themes"
-PLUGIN_VERSION = "1.2.0"
+PLUGIN_VERSION = "1.3.0"
 PLUGIN_VENDOR = "Retro IDE Themes"
 SINCE_BUILD = "253"
 FONT_NAME = "JetBrains Mono"
