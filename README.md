@@ -53,7 +53,8 @@ Restart Xcode and select a theme in **Settings > Themes**.
 ### JetBrains IDEs
 
 The bundled plugin targets JetBrains IDEs 2025.3 and newer. Each theme pairs
-its own editor colors with a macOS Tahoe-inspired Islands UI.
+its own editor colors with an Islands UI based on AppKit's light and dark
+system colors.
 
 1. Open **Settings > Plugins**.
 2. From the gear menu, choose **Install Plugin from Disk**.

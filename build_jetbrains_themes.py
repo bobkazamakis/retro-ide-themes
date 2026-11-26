@@ -332,6 +332,8 @@ def luminance(color):
 
 
 def contrast(first, second):
+    if len(first) == 9:
+        first = mix(second, first, int(first[-2:], 16) / 255)
     a, b = sorted((luminance(first), luminance(second)), reverse=True)
     return (a + 0.05) / (b + 0.05)
 
@@ -341,58 +343,60 @@ def contrasting_text(background):
 
 
 def macos_ui_palette(dark):
-    """Use neutral, layered surfaces and blue accents around the editor."""
+    """Map Aqua and Dark Aqua NSColor defaults sampled in sRGB on macOS 27.2."""
+    # Swing uses solid colors for some surfaces. Resolve translucent controls
+    # and separators over their AppKit window or under-page background.
     if not dark:
         return {
-            "main_window": "#E1E3E9",
-            "surface": "#F8F9FC",
+            "main_window": "#F6F6F6",
+            "surface": "#FFFFFF",
             "elevated": "#FFFFFF",
-            "panel": "#F4F5F8",
-            "tab_inactive": "#EAECF2",
-            "tab_active": "#E1EDFF",
-            "element": "#FAFAFA",
-            "element_hover": "#E9EBF1",
-            "element_active": "#DADDE6",
-            "element_selected": "#D6E7FF",
-            "element_disabled": "#ECEEF3",
-            "border": "#CFD3DE",
-            "border_variant": "#DEE1E9",
-            "border_disabled": "#E4E6ED",
-            "focus": "#176BD5",
-            "border_selected": "#709ED6",
-            "text": "#23252C",
-            "muted": "#535966",
-            "disabled_text": "#868B96",
-            "accent": "#005CC8",
-            "error": "#A52832",
-            "warning": "#7D5300",
-            "success": "#236636",
+            "panel": "#FFFFFF",
+            "tab_inactive": "#DCDCDC",
+            "tab_active": "#B3D7FF",
+            "element": "#FFFFFF",
+            "element_hover": "#E2E2E2",
+            "element_active": "#D7D7D7",
+            "element_selected": "#0064E1",
+            "element_disabled": "#FFFFFF",
+            "border": "#E6E6E6",
+            "border_variant": "#DDDDDD",
+            "grid": "#E6E6E6",
+            "focus": "#0067F47F",
+            "text": "#000000D8",
+            "muted": "#0000007F",
+            "disabled_text": "#0000003F",
+            "accent": "#007AFF",
+            "link": "#0068DA",
+            "error": "#FF383C",
+            "warning": "#FF8D28",
+            "success": "#34C759",
         }
 
     return {
-        "main_window": "#3C3E46",
-        "surface": "#24252B",
-        "elevated": "#34363E",
-        "panel": "#282A30",
-        "tab_inactive": "#30323A",
-        "tab_active": "#293E5B",
-        "element": "#30323A",
-        "element_hover": "#41444F",
-        "element_active": "#4B4F5D",
-        "element_selected": "#294A73",
-        "element_disabled": "#292B32",
-        "border": "#515463",
-        "border_variant": "#41444E",
-        "border_disabled": "#373942",
-        "focus": "#78B6FF",
-        "border_selected": "#527FB7",
-        "text": "#F0F1F5",
-        "muted": "#ADB1BD",
-        "disabled_text": "#777C89",
-        "accent": "#76B1FF",
-        "error": "#FF9398",
-        "warning": "#F5C66A",
-        "success": "#7DD599",
+        "main_window": "#282828",
+        "surface": "#1E1E1E",
+        "elevated": "#282828",
+        "panel": "#1E1E1E",
+        "tab_inactive": "#464646",
+        "tab_active": "#3F638B",
+        "element": "#565656",
+        "element_hover": "#515151",
+        "element_active": "#454545",
+        "element_selected": "#0059D1",
+        "element_disabled": "#3A3A3A",
+        "border": "#393939",
+        "border_variant": "#424242",
+        "grid": "#1A1A1A",
+        "focus": "#1AA9FF7F",
+        "text": "#FFFFFFD8",
+        "muted": "#FFFFFF8C",
+        "disabled_text": "#FFFFFF3F",
+        "accent": "#007AFF",
+        "link": "#419CFF",
+        "error": "#FF4245",
+        "warning": "#FF9230",
+        "success": "#30D158",
     }
 
 
@@ -518,6 +522,8 @@ def build_theme(scheme):
     dark = scheme["name"] in DARK_SCHEMES
     background = colors["g_bg"]
     chrome = macos_ui_palette(dark)
+    # Aqua's status colors need a darker foreground on white surfaces.
+    status_text_mix = 0 if dark else 0.38
     accent_secondary = mix(chrome["panel"], chrome["accent"], 0.18)
     error_secondary = mix(chrome["panel"], chrome["error"], 0.16)
     warning_secondary = mix(chrome["panel"], chrome["warning"], 0.16)
@@ -529,12 +535,12 @@ def build_theme(scheme):
         "text-muted": chrome["muted"],
         "text-secondary": mix(chrome["text"], chrome["surface"], 0.32),
         "text-disabled": chrome["disabled_text"],
-        "text-over-accent": contrasting_text(chrome["accent"]),
+        "text-over-accent": "#FFFFFF",
         "text-over-accent-inverted": chrome["text"],
-        "text-link": chrome["accent"],
-        "text-error": chrome["error"],
-        "text-warning": chrome["warning"],
-        "text-success": chrome["success"],
+        "text-link": chrome["link"],
+        "text-error": mix(chrome["error"], chrome["text"], status_text_mix),
+        "text-warning": mix(chrome["warning"], chrome["text"], status_text_mix),
+        "text-success": mix(chrome["success"], chrome["text"], status_text_mix),
         "editor-text": colors["g_fg"],
         "layer-0-bg": chrome["main_window"],
         "layer-0-bg-inline": chrome["main_window"],
@@ -551,19 +557,19 @@ def build_theme(scheme):
         "accent-brand-bg": chrome["accent"],
         "accent-brand-border": chrome["accent"],
         "accent-brand-bg-secondary": accent_secondary,
-        "accent-brand-border-secondary": chrome["border_selected"],
+        "accent-brand-border-secondary": chrome["accent"],
         "accent-error-bg": chrome["error"],
         "accent-error-border": chrome["error"],
         "accent-error-bg-secondary": error_secondary,
-        "accent-error-border-secondary": colors["reg_red"],
+        "accent-error-border-secondary": chrome["error"],
         "accent-warning-bg": chrome["warning"],
         "accent-warning-border": chrome["warning"],
         "accent-warning-bg-secondary": warning_secondary,
-        "accent-warning-border-secondary": colors["reg_yellow"],
+        "accent-warning-border-secondary": chrome["warning"],
         "accent-success-bg": chrome["success"],
         "accent-success-border": chrome["success"],
         "accent-success-bg-secondary": success_secondary,
-        "accent-success-border-secondary": colors["reg_green"],
+        "accent-success-border-secondary": chrome["success"],
         "core-bg-transparent-hovered": alpha(chrome["text"], "12"),
         "core-bg-transparent-pressed": alpha(chrome["text"], "20"),
         "core-border-transparent": alpha(chrome["text"], "24"),
@@ -584,6 +590,8 @@ def build_theme(scheme):
         "tool-window-border-inline": chrome["border_variant"],
         "main-window-bg": chrome["main_window"],
         "main-window-border": chrome["border"],
+        "island-border": chrome["border_variant"],
+        "table-grid": chrome["grid"],
         # Islands and macOS paint parts of the unified header from the main
         # window rather than TitlePane. All top-bar sources must agree.
         "title-bar-bg": chrome["main_window"],
@@ -597,30 +605,29 @@ def build_theme(scheme):
         "control-bg-disabled": chrome["element_disabled"],
         "control-bg-raised": chrome["elevated"],
         "control-border": chrome["border"],
-        "control-border-disabled": chrome["border_disabled"],
+        "control-border-disabled": chrome["border"],
         "control-border-raised": chrome["border_variant"],
-        "control-brand-bg": chrome["accent"],
-        "control-brand-bg-raised": mix(chrome["accent"], chrome["elevated"], 0.08),
-        "control-brand-border": chrome["accent"],
+        "control-brand-bg": chrome["element_selected"],
+        "control-brand-border": chrome["element_selected"],
         "toolbar-bg-hovered": chrome["element_hover"],
         "toolbar-bg-pressed": chrome["element_active"],
         "toolbar-border": chrome["border_variant"],
-        "toolbar-selected-bg": chrome["element_selected"],
-        "toolbar-selected-bg-active": chrome["accent"],
+        "toolbar-selected-bg": chrome["tab_inactive"],
+        "toolbar-selected-bg-active": chrome["element_selected"],
         "selection-bg-active": chrome["element_selected"],
-        "selection-bg-active-muted": chrome["element_hover"],
-        "selection-bg-inactive": chrome["element_hover"],
+        "selection-bg-active-muted": chrome["tab_active"],
+        "selection-bg-inactive": chrome["tab_inactive"],
         "selection-bg-hovered": alpha(chrome["text"], "0D"),
         "tab-selected-bg-active": chrome["tab_active"],
         "tab-selected-bg-inactive": chrome["tab_inactive"],
-        "tab-selected-border-active": chrome["border_selected"],
+        "tab-selected-border-active": chrome["accent"],
         "tab-selected-border-inactive": chrome["border_variant"],
         "tab-bg-hovered": chrome["element_hover"],
         "tab-file-color-mask-bg": alpha(chrome["main_window"], "80"),
         "feedback-bg": chrome["elevated"],
         "feedback-border": chrome["border"],
         "feedback-brand-bg": accent_secondary,
-        "feedback-brand-border": chrome["border_selected"],
+        "feedback-brand-border": chrome["accent"],
         "feedback-success-bg": success_secondary,
         "feedback-success-border": colors["reg_green"],
         "feedback-warning-bg": warning_secondary,
@@ -644,7 +651,7 @@ def build_theme(scheme):
             "arc.compact": 22,
             "borderWidth": 7,
             "borderWidth.compact": 4,
-            "borderColor": "tool-window-bg",
+            "borderColor": "island-border",
             "inactiveAlpha": 0.44,
         },
         "MainWindow": {
@@ -665,7 +672,7 @@ def build_theme(scheme):
             "inactiveBackground": "title-bar-bg-inactive",
             "foreground": "text-default",
             "inactiveForeground": "text-muted",
-            "infoForeground": "text-muted",
+            "infoForeground": "text-secondary",
             "inactiveInfoForeground": "text-disabled",
         },
         "MainToolbar": {
@@ -687,8 +694,8 @@ def build_theme(scheme):
         "MenuBar": {
             "background": "title-bar-bg",
             "foreground": "text-default",
-            "selectionBackground": "toolbar-bg-hovered",
-            "selectionForeground": "text-default",
+            "selectionBackground": "selection-bg-active",
+            "selectionForeground": "text-over-accent",
         },
         "StatusBar": {
             "background": "status-bar-bg",
@@ -702,6 +709,12 @@ def build_theme(scheme):
                 "background": "tool-window-bg",
                 "inactiveBackground": "tool-window-bg",
                 "borderColor": "tool-window-border",
+            },
+            "HeaderTab": {
+                "underlineColor": "tab-selected-border-active",
+                "inactiveUnderlineColor": "tab-selected-border-inactive",
+                "underlinedTabBackground": "tab-selected-bg-active",
+                "underlinedTabInactiveBackground": "tab-selected-bg-inactive",
             },
             "Stripe": {
                 "background": "main-window-bg",
@@ -721,12 +734,13 @@ def build_theme(scheme):
             "hoverInactiveBackground": "tab-bg-hovered",
         },
         "Panel": {"background": "dialog-bg"},
-        "Label": {"foreground": "text-default"},
+        "Label": {"foreground": "text-default", "disabledForeground": "text-disabled"},
+        "Separator": {"separatorColor": "dialog-border"},
         "Tree": {
             "background": "tool-window-bg",
             "foreground": "text-default",
             "selectionBackground": "selection-bg-active",
-            "selectionForeground": "text-default",
+            "selectionForeground": "text-over-accent",
             "selectionInactiveBackground": "selection-bg-inactive",
             "Selection": {"arc": 12},
         },
@@ -734,37 +748,41 @@ def build_theme(scheme):
             "background": "dialog-bg",
             "foreground": "text-default",
             "selectionBackground": "selection-bg-active",
-            "selectionForeground": "text-default",
+            "selectionForeground": "text-over-accent",
             "selectionInactiveBackground": "selection-bg-inactive",
+            "selectionInactiveForeground": "text-default",
         },
         "Table": {
             "background": "dialog-bg",
             "foreground": "text-default",
+            "gridColor": "table-grid",
             "selectionBackground": "selection-bg-active",
-            "selectionForeground": "text-default",
+            "selectionForeground": "text-over-accent",
             "selectionInactiveBackground": "selection-bg-inactive",
+            "selectionInactiveForeground": "text-default",
         },
         "Button": {
             "arc": 14,
             "foreground": "text-default",
-            "startBackground": "control-bg-raised",
+            "disabledText": "text-disabled",
+            "startBackground": "control-bg",
             "endBackground": "control-bg",
             "startBorderColor": "control-border-raised",
             "endBorderColor": "control-border",
             "default": {
                 "foreground": "text-over-accent",
-                "startBackground": "control-brand-bg-raised",
+                "startBackground": "control-brand-bg",
                 "endBackground": "control-brand-bg",
                 "startBorderColor": "control-brand-border",
                 "endBorderColor": "control-brand-border",
             },
         },
         "TextField": {
-            "background": "control-bg",
+            "background": "dialog-bg",
             "foreground": "text-default",
         },
         "TextArea": {
-            "background": "control-bg",
+            "background": "dialog-bg",
             "foreground": "text-default",
         },
         "ComboBox": {
@@ -774,6 +792,7 @@ def build_theme(scheme):
         "Popup": {
             "background": "popup-bg",
             "borderColor": "popup-border",
+            "separatorColor": "popup-border",
             "Header": {
                 "activeBackground": "popup-bg",
                 "inactiveBackground": "popup-bg",
@@ -787,10 +806,10 @@ def build_theme(scheme):
         },
         "SearchEverywhere": {
             "Header": {"background": "popup-bg"},
-            "SearchField": {"background": "control-bg"},
+            "SearchField": {"background": "dialog-bg"},
             "List": {"settingsBackground": "popup-bg"},
             "Tab": {
-                "selectedBackground": "selection-bg-active",
+                "selectedBackground": "tab-selected-bg-active",
                 "selectedForeground": "text-default",
             },
         },
@@ -798,7 +817,7 @@ def build_theme(scheme):
             "background": "popup-bg",
             "foreground": "text-default",
             "selectionBackground": "selection-bg-active",
-            "selectionForeground": "text-default",
+            "selectionForeground": "text-over-accent",
         },
         "Component": {
             "arc": 12,
@@ -931,18 +950,24 @@ def validate():
         if len(resolved_top_bar) != 1:
             raise SystemExit("%s: split unified top-bar colors %s" %
                              (scheme["name"], sorted(resolved_top_bar)))
-        for panel in ("editor-bg", "tool-window-bg"):
-            if contrast(theme["colors"][panel], theme["colors"]["main-window-bg"]) < 1.20:
-                raise SystemExit("%s: %s blends into the Islands shell" % (scheme["name"], panel))
+        # AppKit's near-neutral surfaces rely on a separator for definition.
+        for panel in ("main-window-bg", "editor-bg", "tool-window-bg"):
+            if contrast(theme["colors"][panel], theme["colors"]["island-border"]) < 1.20:
+                raise SystemExit("%s: %s blends into the island separator" %
+                                 (scheme["name"], panel))
         for foreground, background, label in (
-            ("text-muted", "title-bar-bg", "toolbar secondary text"),
+            ("text-secondary", "title-bar-bg", "toolbar secondary text"),
             ("text-default", "tool-window-bg", "tool-window text"),
-            ("text-default", "selection-bg-active", "selected text"),
+            ("text-over-accent", "selection-bg-active", "selected text"),
+            ("text-default", "selection-bg-inactive", "inactive selected text"),
             ("text-default", "dialog-bg", "dialog text"),
             ("text-default", "popup-bg", "popup text"),
             ("text-default", "tab-selected-bg-active", "selected tab text"),
+            ("text-default", "control-bg", "button text"),
             ("text-over-accent", "control-brand-bg", "default button text"),
-            ("text-over-accent", "control-brand-bg-raised", "default button highlight text"),
+            ("text-error", "dialog-bg", "error text"),
+            ("text-warning", "dialog-bg", "warning text"),
+            ("text-success", "dialog-bg", "success text"),
         ):
             ratio = contrast(theme["colors"][foreground], theme["colors"][background])
             if ratio < 4.5:
