@@ -348,17 +348,17 @@ def macos_ui_palette(dark):
     # and separators over their AppKit window or under-page background.
     if not dark:
         return {
-            "main_window": "#F6F6F6",
-            "surface": "#FFFFFF",
-            "elevated": "#FFFFFF",
-            "panel": "#FFFFFF",
+            "main_window": "#F2F2F2",
+            "surface": "#F6F6F6",
+            "elevated": "#FBFBFB",
+            "panel": "#F6F6F6",
             "tab_inactive": "#DCDCDC",
             "tab_active": "#B3D7FF",
-            "element": "#FFFFFF",
+            "element": "#FAFAFA",
             "element_hover": "#E2E2E2",
             "element_active": "#D7D7D7",
             "element_selected": "#0064E1",
-            "element_disabled": "#FFFFFF",
+            "element_disabled": "#F6F6F6",
             "border": "#E6E6E6",
             "border_variant": "#DDDDDD",
             "grid": "#E6E6E6",
