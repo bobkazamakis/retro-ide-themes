@@ -17,7 +17,7 @@ import uuid
 import xml.etree.ElementTree as ET
 import zipfile
 
-from build_schemes import SCHEMES, check_all
+from build_schemes import SCHEMES, check_all, theme_name
 
 
 ROOT = Path(__file__).resolve().parent
@@ -472,7 +472,7 @@ def build_editor_scheme(scheme):
     colors = scheme["colors"]
     dark = scheme["name"] in DARK_SCHEMES
     root = ET.Element("scheme", {
-        "name": scheme["name"],
+        "name": theme_name(scheme),
         "version": "142",
         "parent_scheme": "Darcula" if dark else "Default",
     })
@@ -481,7 +481,7 @@ def build_editor_scheme(scheme):
     for key, value in (
         ("ide", "idea"),
         ("ideVersion", "2025.3.0.0"),
-        ("originalScheme", scheme["name"]),
+        ("originalScheme", theme_name(scheme)),
         ("pluginId", PLUGIN_ID),
     ):
         child = ET.SubElement(meta, "property", {"name": key})
@@ -827,7 +827,7 @@ def build_theme(scheme):
     }
 
     return {
-        "name": scheme["name"],
+        "name": theme_name(scheme),
         "dark": dark,
         "author": PLUGIN_VENDOR,
         "parentTheme": "Islands Dark" if dark else "Islands Light",
@@ -880,7 +880,7 @@ def build_plugin_xml():
             "targetUi": "islands",
         })
         ET.SubElement(extensions, "bundledColorScheme", {
-            "id": scheme["name"],
+            "id": theme_name(scheme),
             "path": "colorSchemes/%s" % file_slug,
         })
     ET.indent(root, space="  ")
@@ -981,7 +981,7 @@ def main():
         theme_json = json.dumps(build_theme(scheme), indent=2) + "\n"
 
         editor_path = COLOR_SCHEMES / (file_slug + ".xml")
-        importable_path = IMPORTABLE_SCHEMES / (scheme["name"] + ".icls")
+        importable_path = IMPORTABLE_SCHEMES / (theme_name(scheme) + ".icls")
         theme_path = THEMES / (file_slug + ".theme.json")
         editor_path.write_text(editor_xml, encoding="utf-8")
         importable_path.write_text(editor_xml, encoding="utf-8")
@@ -989,7 +989,7 @@ def main():
 
         resources["colorSchemes/%s.xml" % file_slug] = editor_xml
         resources["themes/%s.theme.json" % file_slug] = theme_json
-        print("wrote %-26s JetBrains editor scheme and Islands theme" % scheme["name"])
+        print("wrote %-26s JetBrains editor scheme and Islands theme" % theme_name(scheme))
 
     jar_path, zip_path = build_archives(resources)
     print("wrote %s" % jar_path)

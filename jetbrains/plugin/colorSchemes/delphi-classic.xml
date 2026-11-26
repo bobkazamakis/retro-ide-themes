@@ -1,8 +1,8 @@
-<scheme name="Delphi Classic" version="142" parent_scheme="Default">
+<scheme name="R.C. - Delphi Classic" version="142" parent_scheme="Default">
   <metaInfo>
     <property name="ide">idea</property>
     <property name="ideVersion">2025.3.0.0</property>
-    <property name="originalScheme">Delphi Classic</property>
+    <property name="originalScheme">R.C. - Delphi Classic</property>
     <property name="pluginId">retro.ide.islands.themes</property>
   </metaInfo>
   <option name="EDITOR_FONT_NAME" value="JetBrains Mono" />

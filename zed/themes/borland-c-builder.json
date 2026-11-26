@@ -1,10 +1,10 @@
 {
   "$schema": "https://zed.dev/schema/themes/v0.2.0.json",
-  "name": "Borland C++ Builder",
+  "name": "R.C. - Borland C++ Builder",
   "author": "Retro IDE Themes",
   "themes": [
     {
-      "name": "Borland C++ Builder",
+      "name": "R.C. - Borland C++ Builder",
       "appearance": "light",
       "style": {
         "background.appearance": "opaque",

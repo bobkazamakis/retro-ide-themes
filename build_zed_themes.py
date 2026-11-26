@@ -13,7 +13,7 @@ import json
 from pathlib import Path
 import re
 
-from build_schemes import SCHEMES, check_all
+from build_schemes import SCHEMES, check_all, theme_name
 
 
 ROOT = Path(__file__).resolve().parent
@@ -454,7 +454,7 @@ def build_theme(scheme):
     }
 
     return {
-        "name": scheme["name"],
+        "name": theme_name(scheme),
         "appearance": "dark" if dark else "light",
         "style": style,
     }
@@ -463,7 +463,7 @@ def build_theme(scheme):
 def build_family(scheme):
     return {
         "$schema": SCHEMA,
-        "name": scheme["name"],
+        "name": theme_name(scheme),
         "author": AUTHOR,
         "themes": [build_theme(scheme)],
     }
@@ -519,7 +519,7 @@ def main():
             json.dumps(build_family(scheme), indent=2) + "\n",
             encoding="utf-8",
         )
-        print("wrote %-26s Zed UI and syntax theme" % scheme["name"])
+        print("wrote %-26s Zed UI and syntax theme" % theme_name(scheme))
 
 
 if __name__ == "__main__":

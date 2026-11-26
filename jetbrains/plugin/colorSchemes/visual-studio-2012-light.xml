@@ -1,8 +1,8 @@
-<scheme name="Visual Studio 2012 Light" version="142" parent_scheme="Default">
+<scheme name="R.C. - Visual Studio 2012 Light" version="142" parent_scheme="Default">
   <metaInfo>
     <property name="ide">idea</property>
     <property name="ideVersion">2025.3.0.0</property>
-    <property name="originalScheme">Visual Studio 2012 Light</property>
+    <property name="originalScheme">R.C. - Visual Studio 2012 Light</property>
     <property name="pluginId">retro.ide.islands.themes</property>
   </metaInfo>
   <option name="EDITOR_FONT_NAME" value="JetBrains Mono" />

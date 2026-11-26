@@ -1,8 +1,8 @@
-<scheme name="IntelliJ Light (Islands)" version="142" parent_scheme="Default">
+<scheme name="R.C. - IntelliJ Light (Islands)" version="142" parent_scheme="Default">
   <metaInfo>
     <property name="ide">idea</property>
     <property name="ideVersion">2025.3.0.0</property>
-    <property name="originalScheme">IntelliJ Light (Islands)</property>
+    <property name="originalScheme">R.C. - IntelliJ Light (Islands)</property>
     <property name="pluginId">retro.ide.islands.themes</property>
   </metaInfo>
   <option name="EDITOR_FONT_NAME" value="JetBrains Mono" />

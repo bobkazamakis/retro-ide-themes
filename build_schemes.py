@@ -1825,6 +1825,10 @@ def wrap_scope(scope):
     return '"%s"' % ", ".join(p.strip() for p in scope.split(","))
 
 
+def theme_name(scheme):
+    return "R.C. - " + scheme["name"]
+
+
 def render(scheme):
     colors, styles = scheme["colors"], scheme["styles"]
     out = []
@@ -1832,7 +1836,7 @@ def render(scheme):
     out.append('    // %s' % scheme["note"])
     out.append('    // Generated from the shared rule set. All schemes in this folder')
     out.append('    // carry the same rule names and the same scopes.')
-    out.append('    "name": "%s",' % scheme["name"])
+    out.append('    "name": "%s",' % theme_name(scheme))
     out.append('    "author": "%s",' % AUTHOR)
 
     # variables
@@ -1907,7 +1911,7 @@ def main():
     check_all()
     os.makedirs(OUT, exist_ok=True)
     for scheme in SCHEMES:
-        path = os.path.join(OUT, scheme["name"] + ".sublime-color-scheme")
+        path = os.path.join(OUT, theme_name(scheme) + ".sublime-color-scheme")
         with open(path, "w") as fh:
             fh.write(render(scheme))
         print("wrote %s (%d rules)" % (path, len(RULES)))

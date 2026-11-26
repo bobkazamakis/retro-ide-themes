@@ -5,27 +5,27 @@ JetBrains IDEs, and Zed.
 
 ## Themes
 
-- Visual Studio 2012 Light
-- Visual Studio Enhanced Light
-- Visual Studio Enhanced (Globals vs. Members) Light
-- Visual Studio 2012 Dark
-- Visual Studio Enhanced Dark
-- Visual C++ 6
-- Visual Basic 6
-- Borland Delphi VB6++
-- Xcode Classic
-- Xcode Default (Light)
-- IntelliJ IDEA Default
-- IntelliJ Light (Islands)
-- Eclipse Classic
-- CodeWarrior
-- Delphi Classic
-- Borland C++ Builder
-- Turbo Pascal
-- Turbo C++ 3.0
-- Emacs 21
-- Vim Light
-- Notepad++ Default
+- R.C. - Visual Studio 2012 Light
+- R.C. - Visual Studio Enhanced Light
+- R.C. - Visual Studio Enhanced (Globals vs. Members) Light
+- R.C. - Visual Studio 2012 Dark
+- R.C. - Visual Studio Enhanced Dark
+- R.C. - Visual C++ 6
+- R.C. - Visual Basic 6
+- R.C. - Borland Delphi VB6++
+- R.C. - Xcode Classic
+- R.C. - Xcode Default (Light)
+- R.C. - IntelliJ IDEA Default
+- R.C. - IntelliJ Light (Islands)
+- R.C. - Eclipse Classic
+- R.C. - CodeWarrior
+- R.C. - Delphi Classic
+- R.C. - Borland C++ Builder
+- R.C. - Turbo Pascal
+- R.C. - Turbo C++ 3.0
+- R.C. - Emacs 21
+- R.C. - Vim Light
+- R.C. - Notepad++ Default
 
 ## Install
 

@@ -1,8 +1,8 @@
-<scheme name="Emacs 21" version="142" parent_scheme="Default">
+<scheme name="R.C. - Emacs 21" version="142" parent_scheme="Default">
   <metaInfo>
     <property name="ide">idea</property>
     <property name="ideVersion">2025.3.0.0</property>
-    <property name="originalScheme">Emacs 21</property>
+    <property name="originalScheme">R.C. - Emacs 21</property>
     <property name="pluginId">retro.ide.islands.themes</property>
   </metaInfo>
   <option name="EDITOR_FONT_NAME" value="JetBrains Mono" />

@@ -13,7 +13,7 @@ and the file format come from the themes that Xcode ships; see
 import os
 import plistlib
 
-from build_schemes import SCHEMES, check_all
+from build_schemes import SCHEMES, check_all, theme_name
 
 OUT = os.path.join(os.path.dirname(os.path.abspath(__file__)), "xcode")
 
@@ -253,7 +253,7 @@ def main():
     os.makedirs(OUT, exist_ok=True)
     for scheme in SCHEMES:
         check_mapping(scheme)
-        path = os.path.join(OUT, scheme["name"] + ".xccolortheme")
+        path = os.path.join(OUT, theme_name(scheme) + ".xccolortheme")
         theme = build(scheme)
         check_faces(theme, scheme["name"])
         with open(path, "wb") as fh:
