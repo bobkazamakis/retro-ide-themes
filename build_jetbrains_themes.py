@@ -29,7 +29,7 @@ IMPORTABLE_SCHEMES = OUT / "schemes"
 
 PLUGIN_ID = "retro.ide.islands.themes"
 PLUGIN_NAME = "Retro IDE Islands Themes"
-PLUGIN_VERSION = "1.3.0"
+PLUGIN_VERSION = "1.3.1"
 PLUGIN_VENDOR = "Retro IDE Themes"
 SINCE_BUILD = "253"
 FONT_NAME = "JetBrains Mono"
@@ -343,25 +343,26 @@ def contrasting_text(background):
 
 
 def macos_ui_palette(dark):
-    """Map Aqua and Dark Aqua NSColor defaults sampled in sRGB on macOS 27.2."""
+    """Use AppKit colors with warmer, dimmer light surfaces."""
     # Swing uses solid colors for some surfaces. Resolve translucent controls
     # and separators over their AppKit window or under-page background.
     if not dark:
         return {
-            "main_window": "#F2F2F2",
-            "surface": "#F6F6F6",
-            "elevated": "#FBFBFB",
-            "panel": "#F6F6F6",
+            "main_window": "#D9D8D5",
+            "surface": "#EFEEEB",
+            "elevated": "#F3F2EF",
+            "panel": "#EFEEEB",
+            "settings_sidebar": "#E2E1DE",
             "tab_inactive": "#DCDCDC",
             "tab_active": "#B3D7FF",
-            "element": "#FAFAFA",
-            "element_hover": "#E2E2E2",
-            "element_active": "#D7D7D7",
+            "element": "#EAE9E6",
+            "element_hover": "#CBCCC9",
+            "element_active": "#C1C2BF",
             "element_selected": "#0064E1",
-            "element_disabled": "#F6F6F6",
-            "border": "#E6E6E6",
-            "border_variant": "#DDDDDD",
-            "grid": "#E6E6E6",
+            "element_disabled": "#E5E4E1",
+            "border": "#D2D1CD",
+            "border_variant": "#BFBFBA",
+            "grid": "#D9D8D5",
             "focus": "#0067F47F",
             "text": "#000000D8",
             "muted": "#0000007F",
@@ -826,6 +827,26 @@ def build_theme(scheme):
         },
     }
 
+    if not dark:
+        named_colors["settings-sidebar-bg"] = chrome["settings_sidebar"]
+        ui["SidePanel"] = {"background": "settings-sidebar-bg"}
+        ui["Button"]["background"] = "dialog-bg"
+        ui["ComboBox"].update({
+            "nonEditableBackground": "control-bg",
+            "disabledBackground": "control-bg-disabled",
+            "ArrowButton": {
+                "background": "control-bg",
+                "nonEditableBackground": "control-bg",
+            },
+        })
+        # Swing uses separate defaults for submenu and leaf rows.
+        ui["MenuItem"].update({
+            "selectionBackground": "selection-bg-active-muted",
+            "selectionForeground": "text-default",
+            "acceleratorSelectionForeground": "text-default",
+        })
+        ui["Menu"] = ui["MenuItem"].copy()
+
     return {
         "name": theme_name(scheme),
         "dark": dark,
@@ -955,7 +976,7 @@ def validate():
             if contrast(theme["colors"][panel], theme["colors"]["island-border"]) < 1.20:
                 raise SystemExit("%s: %s blends into the island separator" %
                                  (scheme["name"], panel))
-        for foreground, background, label in (
+        text_pairs = (
             ("text-secondary", "title-bar-bg", "toolbar secondary text"),
             ("text-default", "tool-window-bg", "tool-window text"),
             ("text-over-accent", "selection-bg-active", "selected text"),
@@ -968,7 +989,14 @@ def validate():
             ("text-error", "dialog-bg", "error text"),
             ("text-warning", "dialog-bg", "warning text"),
             ("text-success", "dialog-bg", "success text"),
-        ):
+        )
+        if not theme["dark"]:
+            menu = theme["ui"]["Menu"]
+            text_pairs += (
+                (menu["selectionForeground"], menu["selectionBackground"], "selected menu text"),
+                ("text-default", "settings-sidebar-bg", "settings sidebar text"),
+            )
+        for foreground, background, label in text_pairs:
             ratio = contrast(theme["colors"][foreground], theme["colors"][background])
             if ratio < 4.5:
                 raise SystemExit(
